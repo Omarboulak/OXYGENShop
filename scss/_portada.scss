@@ -1,4 +1,4 @@
-@import "variables";
+@use 'variables';
 
 
 //texto
@@ -18,7 +18,7 @@
     }
 
     button{
-        background-color: $color-principal;
+        background-color: variables.$color-principal;
         box-shadow: 5px 10px 14px #07ACE64A;
         padding: 20px 0;
         width: 310px;
@@ -31,17 +31,20 @@
 //imagen
 .portada_img{
     text-align: center;
-
-    .portada_img--pequenia{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .portada_img--grande{
-        display: none;
-    }
+    height: 20rem;
+    width: 100%;
 }
 
+.portada_img--pequenia{
+    width: 100%;
+    background-image:url(../img/portada.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.portada_img--grande{
+    display: none;
+}
 
 @media only screen and (min-width: 1200px) {
 
@@ -63,6 +66,7 @@
     }
 
     .portada_img--grande{
+        display: block;
         width: 100%;
         background-image:url(../img/img_escritorio.png);
         background-size: contain;
@@ -92,6 +96,7 @@
     }
 
     .portada_img--grande{
+        display: block;
         width: 100%;
         background-image:url(../img/img_escritorio.png);
         background-size: contain;

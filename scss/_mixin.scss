@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@mixin circulo($fondo: #FB3B64){
+    width: 63px;
+    height: 63px;
+    background-color: $fondo;
+    border-radius: 50%;
+    margin: 3rem auto 0.6rem;
+}

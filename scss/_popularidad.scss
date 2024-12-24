@@ -1,0 +1,95 @@
+@use 'mixin';
+@use 'variables';
+
+.popu{
+    text-align: center;
+    width: 100%;
+}
+
+.popu__caja{
+    position: relative;
+
+    p:first-of-type {
+        font-weight: 800;
+        font-size: 20px;
+        letter-spacing: 6px;
+        margin-bottom: 20px;
+    }
+
+    p:last-of-type{
+        font-size: 17px;
+        font-weight: 400;
+        color: #A5A5A5;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 400;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.popu__img{
+    position: absolute;
+}
+
+.popu__img--ojo{
+    top: 10px
+}
+
+.rojo{
+    @include mixin.circulo;
+}
+
+.azul{
+    @include mixin.circulo($fondo:  variables.$color-principal);
+}
+
+.verde{
+    @include mixin.circulo($fondo: #55DFB4);
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+    .popu__caja{
+        img{
+            top: 50px;
+        }
+    }
+
+    .popu__img--ojo{
+        top: 60px !important
+    }
+
+    .popularidad{
+        display: flex;
+        justify-content: center;
+        gap: 15rem;
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    .popu__caja{
+        img{
+            top: 50px;
+        }
+    }
+
+    .popu__img--ojo{
+        top: 60px !important
+    }
+
+    .popularidad{
+        display: flex;
+        justify-content: center;
+        gap: 9rem;
+        margin-top: 5rem;
+    }
+}
