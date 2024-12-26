@@ -45,7 +45,7 @@ h2{
 }
 
 .azul{
-    @include mixin.circulo($fondo:  variables.$color-principal);
+    @include mixin.circulo($fondo: variables.$color-principal);
 }
 
 .verde{

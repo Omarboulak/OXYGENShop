@@ -1,0 +1,73 @@
+@use 'variables';
+
+.cards{
+    background-color: #F7F7F7;
+    padding: 5rem 0;
+}
+
+.cards__{
+    width: 80%;
+    background-color: #FFFF;
+    margin: 0 auto;
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        padding: 20px;
+    }
+
+    h3{
+        margin-top: 2rem;
+        font-size: 30px;
+        font-weight: 400;
+        padding-left: 20px;
+        width: 60%;
+    }
+}
+
+.cards__first--img, 
+.cards__shop--img, 
+.cards__brand--img{
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+
+    img{
+        position: relative;
+        z-index:3;
+    }
+}
+
+
+//cambio el fonodo del altavoz
+.cards__brand--img{
+    background-color: #55DFB4;
+    padding-top: 0;
+    img{
+        transform: translate(-5%, 15%);
+    }
+}
+
+
+//cambio el fondo del mack
+.fondo-mack{
+    width: 90px;
+    height: 90px;
+    border-radius: 41px;
+    background-color: #FB3B64;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 4.9rem;
+    top: 0
+}
+
+
+// cambio el fondo del movil
+.fondo-movil{
+    width: 131px;
+    height: 135px;
+    border-radius: 50%;
+    background-color: variables.$color-principal;
+    position: absolute;
+    right: 8.1rem;
+    top: 8px;
+}

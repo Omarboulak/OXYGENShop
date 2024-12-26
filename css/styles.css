@@ -262,18 +262,17 @@ h2 {
 }
 .cards {
   background-color: #F7F7F7;
-  margin-top: 5rem;
+  padding: 5rem 0;
 }
 
 .cards__ {
   width: 80%;
   background-color: white;
-  margin: 5rem auto;
+  margin: 0 auto;
 }
 .cards__ p {
   font-size: 14px;
   font-weight: 400;
-  margin-top: 2rem;
   padding: 20px;
 }
 .cards__ h3 {
@@ -281,12 +280,74 @@ h2 {
   font-size: 30px;
   font-weight: 400;
   padding-left: 20px;
+  width: 60%;
 }
 
 .cards__first--img,
 .cards__shop--img,
 .cards__brand--img {
   text-align: center;
+  position: relative;
+  padding-top: 15px;
+}
+.cards__first--img img,
+.cards__shop--img img,
+.cards__brand--img img {
+  position: relative;
+  z-index: 3;
+}
+
+.cards__brand--img {
+  background-color: #55DFB4;
+  padding-top: 0;
+}
+.cards__brand--img img {
+  transform: translate(-5%, 15%);
+}
+
+.fondo-mack {
+  width: 90px;
+  height: 90px;
+  border-radius: 41px;
+  background-color: #FB3B64;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 4.9rem;
+  top: 0;
+}
+
+.fondo-movil {
+  width: 131px;
+  height: 135px;
+  border-radius: 50%;
+  background-color: #08A6E4;
+  position: absolute;
+  right: 8.1rem;
+  top: 8px;
+}
+
+.precios .basic {
+  width: 80%;
+  border: 1px solid #FB3B64;
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 2rem 0;
+}
+.precios .basic .cantidad,
+.precios .basic .propiedades {
+  display: inline-block;
+  margin: 0 2rem;
+}
+.precios .basic .cantidad {
+  text-align: center;
+  height: 100%;
+}
+.precios .basic .propiedades {
+  margin-left: 2rem;
+}
+.precios .basic .propiedades li {
+  margin-bottom: 15px;
+  list-style-image: url(../img/Checkbox.png);
 }
 
 /*# sourceMappingURL=styles.css.map */

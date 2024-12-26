@@ -1,0 +1,30 @@
+.precios {
+
+    .basic {
+        width: 80%;
+        border: 1px solid #FB3B64;
+        margin: 0 auto;
+        border-radius: 16px;
+        padding: 2rem 0;
+
+        .cantidad,
+        .propiedades {
+            display: inline-block; 
+            margin: 0 2rem;
+        }
+
+        .cantidad{
+            text-align: center;
+            height: 100%;
+        }
+
+        .propiedades {
+            margin-left: 2rem;
+
+            li {
+                margin-bottom: 15px; 
+                list-style-image: url(../img/Checkbox.png);
+            }
+        }
+    }
+}
