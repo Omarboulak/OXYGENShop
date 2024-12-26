@@ -329,25 +329,93 @@ h2 {
 .precios .basic {
   width: 80%;
   border: 1px solid #FB3B64;
-  margin: 0 auto;
+  margin: 5rem auto;
   border-radius: 16px;
   padding: 2rem 0;
+  position: relative;
 }
-.precios .basic .cantidad,
-.precios .basic .propiedades {
+.precios .profesional {
+  width: 80%;
+  border: 1px solid #08A6E4;
+  margin: 5rem auto;
+  border-radius: 16px;
+  padding: 2rem 0;
+  position: relative;
+}
+.precios .premium {
+  width: 80%;
+  border: 1px solid #55DFB4;
+  margin: 5rem auto;
+  border-radius: 16px;
+  padding: 2rem 0;
+  position: relative;
+}
+.precios h2 {
+  text-align: center;
+  font-size: 36px;
+}
+.precios .cantidad,
+.precios .propiedades {
   display: inline-block;
   margin: 0 2rem;
+  width: 30%;
+  vertical-align: middle;
 }
-.precios .basic .cantidad {
+.precios .cantidad {
   text-align: center;
   height: 100%;
 }
-.precios .basic .propiedades {
+.precios .cantidad h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.precios .cantidad p {
+  font-size: 46px;
+  font-weight: 300;
+  color: #FB3B64;
+}
+.precios .propiedades {
   margin-left: 2rem;
 }
-.precios .basic .propiedades li {
+.precios .propiedades li {
   margin-bottom: 15px;
   list-style-image: url(../img/Checkbox.png);
+}
+.precios .propiedades .no-p {
+  list-style-image: url(../img/Cross.png);
+}
+.precios .boton-basic {
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  background-color: #EB476E;
+  border: 0;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.precios .boton-prof {
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  background-color: #07ACE6;
+  border: 0;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.precios .boton-prem {
+  width: 150px;
+  height: 50px;
+  border-radius: 23px;
+  background-color: #55DFB4;
+  border: 0;
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,12 +1,36 @@
+@use 'variables';
+
 *{
     margin: 0;
     padding: 0;
 }
 
-@mixin circulo($fondo: #FB3B64){
+@mixin circulo($fondo: variables.$rosa){
     width: 63px;
     height: 63px;
     background-color: $fondo;
     border-radius: 50%;
     margin: 3rem auto 0.6rem;
+}
+
+
+@mixin precio($cborde: variables.$rosa){
+    width: 80%;
+    border: 1px solid $cborde;
+    margin: 5rem auto;
+    border-radius: 16px;
+    padding: 2rem 0;
+    position: relative;
+}
+
+@mixin boton($cboton: #EB476E){
+    width: 150px;
+    height: 50px;
+    border-radius: 23px;
+    background-color: $cboton;
+    border: 0;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
