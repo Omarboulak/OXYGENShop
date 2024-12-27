@@ -2,7 +2,8 @@
 @use 'variables';
 
 .precios {
-
+    padding: 2rem 0;
+    
     .basic {
         @include mixin.precio;
     }
@@ -15,56 +16,41 @@
         @include mixin.precio($cborde: variables.$verde)
     }
 
-        h2{
-            text-align: center;
-            font-size: 36px;
-        }
-        .cantidad,
-        .propiedades {
-            display: inline-block; 
-            margin: 0 2rem;
-            width: 30%;
-            vertical-align: middle;
-        }
+    h2{
+        text-align: center;
+        font-size: 36px;
+    }
 
-        .cantidad{
-            text-align: center;
-            height: 100%;
+    .cantidad,
+    .propiedades {
+        display: inline-block; 
+        margin: 0 2rem;
+        width: 30%;
+        vertical-align: middle;
+    }
 
-            h4{
-                font-size: 20px;
-                font-weight: 700;
-            }
-
-            p{
-                font-size: 46px;
-                font-weight: 300;
-                color: variables.$rosa;
-            }
-        }
-
-        .propiedades {
-            margin-left: 2rem;
+    .propiedades {
+        margin-left: 2rem;
             
-            li {
-                margin-bottom: 15px; 
-                list-style-image: url(../img/Checkbox.png);
-            }
-
-            .no-p{
-                list-style-image: url(../img/Cross.png);
-            }
+        li {
+            margin-bottom: 15px; 
+            list-style-image: url(../img/Checkbox.png);
         }
 
-        .boton-basic{
-            @include mixin.boton;
+        .no-p{
+            list-style-image: url(../img/Cross.png);
         }
-        
-        .boton-prof{
-            @include mixin.boton($cboton: #07ACE6);
-        }
+    }
 
-        .boton-prem{
-            @include mixin.boton($cboton: #55DFB4);
-        }
+    .boton-basic{
+        @include mixin.boton;
+    }
+
+    .boton-prof{
+        @include mixin.boton($cboton: #07ACE6);
+    }
+
+    .boton-prem{
+        @include mixin.boton($cboton: #55DFB4);
+    }
 }

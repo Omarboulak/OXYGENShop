@@ -21,6 +21,28 @@
     border-radius: 16px;
     padding: 2rem 0;
     position: relative;
+
+    .cantidad{
+        text-align: center;
+        height: 100%;
+
+        h4{
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        p:first-of-type{
+            font-size: 46px;
+            font-weight: 300;
+            color: $cborde;
+        }
+
+        p{
+            font-size: 14px;
+            font-weight: 700;
+            color: #13253B;
+        }
+    }
 }
 
 @mixin boton($cboton: #EB476E){

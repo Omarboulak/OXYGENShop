@@ -1,0 +1,85 @@
+@use 'variables';
+
+.contact{
+    padding: 2rem;
+    
+    &__info{
+        margin-bottom: 3rem;
+        h2{
+            font-size: 40px;
+            font-weight: 400;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .subtitulo{
+            margin-bottom: 2rem;
+        }
+        .iconos{
+            font-weight: 600;
+            color: #A5A5A5;
+
+            p{
+                display: inline-block;
+                vertical-align: middle;
+                padding-left: 10px;
+            }
+        }
+    }
+
+
+    &__datos{
+        label{
+            display: inline;
+            margin-bottom: 1.5rem;
+            color: variables.$color-principal;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .rellenar{
+            width: 100%;
+            border: 0;
+            outline: none;
+            border-bottom: 1px solid #95989A;
+            margin-bottom: 2rem;
+        }
+
+        .consent{
+            height: 100%;
+        }
+
+        .check-consent{
+            display: inline;
+            vertical-align: top;
+        }
+
+        .label-consent {
+            display: inline-block;
+            width: 80%;
+            padding-left: 1.5rem;
+
+            label{
+                font-size: 14px;
+                font-weight: 400;
+                color: #707070;
+            }
+        }
+
+        .enviar{
+            width: 226px;
+            height: 57px;
+            border-radius: 35px;
+            background-color: variables.$color-principal;
+            box-shadow: 5px 10px 14px 0px #07ACE64A;
+            border: 0;
+            margin-top: 1.5rem;
+            color: #FFFF;
+        }
+
+        .btn-contact{
+            text-align: right;
+        }
+    }
+}

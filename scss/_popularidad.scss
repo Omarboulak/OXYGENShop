@@ -4,6 +4,13 @@
 .popu{
     text-align: center;
     width: 100%;
+
+    h2{
+        font-size: 30px;
+        font-weight: 400;
+        width: 80%;
+        margin: 0 auto;
+    }
 }
 
 .popu__caja{
@@ -23,13 +30,6 @@
         width: 80%;
         margin: 0 auto;
     }
-}
-
-h2{
-    font-size: 30px;
-    font-weight: 400;
-    width: 80%;
-    margin: 0 auto;
 }
 
 .popu__img{

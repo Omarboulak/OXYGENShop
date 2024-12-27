@@ -6,7 +6,7 @@
 header {
   height: 70px;
   width: 100%;
-  box-shadow: 0 3px 6px black;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   position: relative;
 }
 
@@ -101,7 +101,8 @@ nav {
 }
 .portada_contenido button {
   background-color: #08A6E4;
-  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.2901960784);
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  border: 0;
   padding: 20px 0;
   width: 310px;
   border-radius: 40px;
@@ -175,6 +176,12 @@ nav {
   text-align: center;
   width: 100%;
 }
+.popu h2 {
+  font-size: 30px;
+  font-weight: 400;
+  width: 80%;
+  margin: 0 auto;
+}
 
 .popu__caja {
   position: relative;
@@ -189,13 +196,6 @@ nav {
   font-size: 17px;
   font-weight: 400;
   color: #A5A5A5;
-  width: 80%;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 30px;
-  font-weight: 400;
   width: 80%;
   margin: 0 auto;
 }
@@ -326,6 +326,9 @@ h2 {
   top: 8px;
 }
 
+.precios {
+  padding: 2rem 0;
+}
 .precios .basic {
   width: 80%;
   border: 1px solid #FB3B64;
@@ -333,6 +336,24 @@ h2 {
   border-radius: 16px;
   padding: 2rem 0;
   position: relative;
+}
+.precios .basic .cantidad {
+  text-align: center;
+  height: 100%;
+}
+.precios .basic .cantidad h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.precios .basic .cantidad p:first-of-type {
+  font-size: 46px;
+  font-weight: 300;
+  color: #FB3B64;
+}
+.precios .basic .cantidad p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #13253B;
 }
 .precios .profesional {
   width: 80%;
@@ -342,6 +363,24 @@ h2 {
   padding: 2rem 0;
   position: relative;
 }
+.precios .profesional .cantidad {
+  text-align: center;
+  height: 100%;
+}
+.precios .profesional .cantidad h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.precios .profesional .cantidad p:first-of-type {
+  font-size: 46px;
+  font-weight: 300;
+  color: #08A6E4;
+}
+.precios .profesional .cantidad p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #13253B;
+}
 .precios .premium {
   width: 80%;
   border: 1px solid #55DFB4;
@@ -349,6 +388,24 @@ h2 {
   border-radius: 16px;
   padding: 2rem 0;
   position: relative;
+}
+.precios .premium .cantidad {
+  text-align: center;
+  height: 100%;
+}
+.precios .premium .cantidad h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.precios .premium .cantidad p:first-of-type {
+  font-size: 46px;
+  font-weight: 300;
+  color: #55DFB4;
+}
+.precios .premium .cantidad p {
+  font-size: 14px;
+  font-weight: 700;
+  color: #13253B;
 }
 .precios h2 {
   text-align: center;
@@ -360,19 +417,6 @@ h2 {
   margin: 0 2rem;
   width: 30%;
   vertical-align: middle;
-}
-.precios .cantidad {
-  text-align: center;
-  height: 100%;
-}
-.precios .cantidad h4 {
-  font-size: 20px;
-  font-weight: 700;
-}
-.precios .cantidad p {
-  font-size: 46px;
-  font-weight: 300;
-  color: #FB3B64;
 }
 .precios .propiedades {
   margin-left: 2rem;
@@ -416,6 +460,107 @@ h2 {
   bottom: -25px;
   left: 50%;
   transform: translate(-50%, 0);
+}
+
+.contact {
+  padding: 2rem;
+}
+.contact__info {
+  margin-bottom: 3rem;
+}
+.contact__info h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+.contact__info p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.contact__info .subtitulo {
+  margin-bottom: 2rem;
+}
+.contact__info .iconos {
+  font-weight: 600;
+  color: #A5A5A5;
+}
+.contact__info .iconos p {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.contact__datos label {
+  display: inline;
+  margin-bottom: 1.5rem;
+  color: #08A6E4;
+  font-size: 11px;
+  font-weight: 600;
+}
+.contact__datos .rellenar {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #95989A;
+  margin-bottom: 2rem;
+}
+.contact__datos .consent {
+  height: 100%;
+}
+.contact__datos .check-consent {
+  display: inline;
+  vertical-align: top;
+}
+.contact__datos .label-consent {
+  display: inline-block;
+  width: 80%;
+  padding-left: 1.5rem;
+}
+.contact__datos .label-consent label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #707070;
+}
+.contact__datos .enviar {
+  width: 226px;
+  height: 57px;
+  border-radius: 35px;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  border: 0;
+  margin-top: 1.5rem;
+  color: white;
+}
+.contact__datos .btn-contact {
+  text-align: right;
+}
+
+footer {
+  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+  padding: 0 2rem;
+}
+footer .copy {
+  display: inline-block;
+}
+footer .copy h2 {
+  font-size: 26px;
+  color: #08A6E4;
+  font-weight: 300;
+}
+footer .copy p {
+  font-size: 11px;
+  font-weight: 400;
+  color: #A5A5A5;
+}
+footer .copy {
+  padding: 2rem 0;
+}
+footer .redes {
+  display: inline-block;
+  text-align: right;
+  width: 55%;
+}
+footer .redes img {
+  display: inline-block;
+  padding-left: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

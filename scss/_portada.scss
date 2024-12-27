@@ -19,7 +19,8 @@
 
     button{
         background-color: variables.$color-principal;
-        box-shadow: 5px 10px 14px #07ACE64A;
+        box-shadow: 5px 10px 14px 0px #07ACE64A;
+        border: 0;
         padding: 20px 0;
         width: 310px;
         border-radius: 40px;
