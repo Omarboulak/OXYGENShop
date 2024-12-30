@@ -54,3 +54,97 @@
         @include mixin.boton($cboton: #55DFB4);
     }
 }
+
+
+@media only screen and (min-width: 1200px) {
+
+    .precios {
+        .precios__caja{
+            display: flex;
+            .cantidad,
+            .propiedades {
+                display: block;
+                margin: 0;
+                width: 100%;
+                vertical-align: auto;
+                height: auto;
+            }
+
+            .cantidad{
+                width: 100%;
+                margin-bottom: 6rem;
+            }
+            .basic, .profesional, .premium{
+                text-align: center;
+                padding-bottom: 3rem;
+                margin: 2rem;
+            }
+
+            .profesional{
+                transition: all 1s linear;
+            }
+
+            .profesional:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 27px 0px #07ACE64A;
+            }
+
+            .propiedades {                
+                li {
+                    list-style-position: inside;   
+                }
+            
+            }
+        }
+    }
+}
+
+
+//Responsive para tablet 
+
+@media only screen and (min-width: 768px) {
+
+    .precios {
+        h2{
+            margin: 7rem 0 3rem;
+        }
+        .precios__caja{
+            display: flex;
+
+            .cantidad,
+            .propiedades {
+                display: block;
+                margin: 0;
+                width: 100%;
+                vertical-align: auto;
+                height: auto;
+            }
+
+            .cantidad{
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+            .basic, .profesional, .premium{
+                text-align: center;
+                padding-bottom: 3rem;
+                margin: 2rem;
+            }
+
+            .profesional{
+                transition: all 1s linear;
+            }
+
+            .profesional:hover{
+                transform: scale(1.1);
+                box-shadow: 5px 10px 27px 0px #07ACE64A;
+            }
+
+            .propiedades {                
+                li {
+                    list-style-position: inside;   
+                }
+            
+            }
+        }
+    }
+}

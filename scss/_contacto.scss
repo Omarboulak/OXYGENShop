@@ -83,3 +83,48 @@
         }
     }
 }
+
+
+@media only screen and (min-width: 1200px) {
+    .contact{
+        display: flex;
+        justify-content: center;
+        margin: 7rem;
+        &__info{
+            .info{
+                display: flex;
+
+                .iconos{
+                    display: flex;
+                    align-items: center;
+                    margin-right: 1.5rem;
+                }
+            }
+        }
+
+        &__datos{
+            width: 40%;
+            margin-left: 10rem;
+            .consent{
+                height: auto;
+            }
+        }
+    }
+}
+
+    @media only screen and (min-width: 768px) {
+        .contact{
+            display: flex;
+            justify-content: center;
+
+    
+            &__datos{
+                width: 40%;
+                margin-left: 4rem;
+                .consent{
+                    height: auto;
+                }
+            }
+        }
+
+}

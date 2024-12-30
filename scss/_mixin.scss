@@ -46,7 +46,7 @@
 }
 
 @mixin boton($cboton: #EB476E){
-    width: 150px;
+    width: 150px;   
     height: 50px;
     border-radius: 23px;
     background-color: $cboton;
@@ -55,4 +55,13 @@
     bottom: -25px;
     left: 50%;
     transform: translate(-50%, 0);
+}
+
+@mixin linea($clinea: variables.$rosa){
+    width: 65%;
+    margin-top: 2rem;
+    height: 4px;
+    background-color: $clinea;
+    border: 0;
+    margin-left: 20px;    
 }

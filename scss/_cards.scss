@@ -1,73 +1,252 @@
 @use 'variables';
+@use 'mixin';
 
 .cards{
     background-color: #F7F7F7;
-    padding: 5rem 0;
-}
+    padding: 1rem 0;
 
-.cards__{
-    width: 80%;
-    background-color: #FFFF;
-    margin: 0 auto;
-    p{
-        font-size: 14px;
-        font-weight: 400;
-        padding: 20px;
+    .cards__{
+        width: 80%;
+        background-color: #FFFF;
+        margin: 5rem auto;
+        p{
+            font-size: 14px;
+            font-weight: 400;
+            padding: 20px;
+        }
+    
+        h3{
+            margin-top: 2rem;
+            font-size: 30px;
+            font-weight: 400;
+            padding-left: 20px;
+            width: 60%;
+        }
+
+        //cambio el fondo del mack
+        .fondo-mack{
+            width: 90px;
+            height: 90px;
+            border-radius: 41px;
+            background-color: #FB3B64;
+            transform: rotate(45deg);
+            position: absolute;
+            right: 4.9rem;
+            top: 0
+        }
+
+
+        // cambio el fondo del movil
+        .fondo-movil{
+            width: 131px;
+            height: 135px;
+            border-radius: 50%;
+            background-color: variables.$color-principal;
+            position: absolute;
+            right: 8.1rem;
+            top: 8px;
+        }
+
+        .grande{
+            display: none;
+        }
+
     }
-
-    h3{
-        margin-top: 2rem;
-        font-size: 30px;
-        font-weight: 400;
-        padding-left: 20px;
-        width: 60%;
-    }
-}
-
-.cards__first--img, 
-.cards__shop--img, 
-.cards__brand--img{
-    text-align: center;
-    position: relative;
-    padding-top: 15px;
-
-    img{
+    
+    .cards__first--img, 
+    .cards__shop--img, 
+    .cards__brand--img{
+        text-align: center;
         position: relative;
-        z-index:3;
+        padding-top: 15px;
+    
+        img{
+            position: relative;
+            z-index:3;
+        }
+    }
+    
+    
+    //cambio el fonodo del altavoz
+    .cards__brand--img{
+        background-color: #55DFB4;
+        padding-top: 0;
+        img{
+            transform: translate(-5%, 15%);
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    .cards{
+        background-color: #F7F7F7;
+        .cards__{
+            display: flex;
+            border: 1px solid #E8E9ED;
+            .pequenio{
+                display: none;
+            }
+            
+            .grande{
+                display: block; 
+            }
+        }
+
+        .cards__tromp{
+            background-color: #F7F7F7;
+            border: 0;
+            .cards__cont{
+                background-color: #FFFF;
+                border: 1px solid #E8E9ED;
+            }
+        }
+
+        .cards__primer{
+            flex-direction: row-reverse;
+        }
+
+
+        .cards__cont{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            p{
+                width: 70%;
+            }
+
+            .hr-pc{
+                @include mixin.linea;
+            }
+
+            .hr-m{
+                @include mixin.linea($clinea: variables.$color-principal)
+            }
+
+            .hr-t{
+                @include mixin.linea($clinea: variables.$verde)               
+            }
+
+        }
+
+        .cards__first--img, 
+        .cards__shop--img, 
+        .cards__brand--img{
+            width: 50%;
+            padding: 5rem 0 2rem;
+            .fondo-mack{
+                width: 180px;
+                height: 180px;
+                top: 3rem;
+            }
+
+            .fondo-movil{
+                width: 320px;
+                height: 320px;
+                top: 4rem;
+            }
+
+            .movil{
+                margin-left: 2.5rem;
+            }
+        }
+
+        .cards__brand--img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 4rem;
+            border: 1px solid #E8E9ED;
+        }
     }
 }
 
 
-//cambio el fonodo del altavoz
-.cards__brand--img{
-    background-color: #55DFB4;
-    padding-top: 0;
-    img{
-        transform: translate(-5%, 15%);
+
+//Tablet
+@media only screen and (min-width: 768px) {
+
+    .cards{
+        background-color: #F7F7F7;
+        .cards__{
+            display: flex;
+            border: 1px solid #E8E9ED;
+            
+        }
+
+        .cards__tromp{
+            background-color: #F7F7F7;
+            border: 0;
+            .cards__cont{
+                background-color: #FFFF;
+                border: 1px solid #E8E9ED;
+            }
+        }
+
+        .cards__primer{
+            flex-direction: row-reverse;
+        }
+
+        //contenido del card
+        .cards__cont{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 50%;
+            p{
+                width: 70%;
+            }
+
+            .hr-pc{
+                @include mixin.linea;
+                margin-top: 0;
+
+            }
+
+            .hr-m{
+                @include mixin.linea($clinea: variables.$color-principal);
+                margin-top: 0;
+
+            }
+
+            .hr-t{
+                @include mixin.linea($clinea: variables.$verde);
+                margin-top: 0;
+               
+            }
+
+        }
+
+        //parte de la imagen de la card
+        .cards__first--img, 
+        .cards__shop--img, 
+        .cards__brand--img{
+            width: 50%;
+            padding: 5rem 0 2rem;
+            .fondo-mack{
+                right: 3rem;
+                top: 3rem;
+            }
+
+            .fondo-movil{
+                left: 4rem;
+                top: 4.5rem;
+            }
+
+            .movil{
+                margin-left: 2.5rem;
+            }
+        }
+
+        .cards__brand--img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1rem;
+            border: 1px solid #E8E9ED;
+        }
     }
-}
-
-
-//cambio el fondo del mack
-.fondo-mack{
-    width: 90px;
-    height: 90px;
-    border-radius: 41px;
-    background-color: #FB3B64;
-    transform: rotate(45deg);
-    position: absolute;
-    right: 4.9rem;
-    top: 0
-}
-
-
-// cambio el fondo del movil
-.fondo-movil{
-    width: 131px;
-    height: 135px;
-    border-radius: 50%;
-    background-color: variables.$color-principal;
-    position: absolute;
-    right: 8.1rem;
-    top: 8px;
 }
