@@ -19,6 +19,11 @@
     h2{
         text-align: center;
         font-size: 36px;
+        font-family: variables.$raleway;
+    }
+
+    h4{
+        font-family: variables.$raleway;
     }
 
     .cantidad,
@@ -27,6 +32,11 @@
         margin: 0 2rem;
         width: 30%;
         vertical-align: middle;
+        font-family: variables.$opensans;
+    }
+
+    .cantidad p:last-of-type{
+        font-family: variables.$raleway;
     }
 
     .propiedades {
@@ -81,7 +91,7 @@
             }
 
             .profesional{
-                transition: all 1s linear;
+                transition: all 0.3s ease-in;
             }
 
             .profesional:hover{

@@ -10,6 +10,7 @@
 
     h1{
         margin-bottom: 20px;
+        font-family: variables.$raleway;
     }
 
     p{
@@ -24,6 +25,7 @@
         padding: 20px 0;
         width: 310px;
         border-radius: 40px;
+        color: white;
     }
     
 }
@@ -53,6 +55,10 @@
         margin-bottom: 3rem;
         button{
             width: 440px;
+
+        }
+        h1{
+            font-size: 41px;
         }
     }
 

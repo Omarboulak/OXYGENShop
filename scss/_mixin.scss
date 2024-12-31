@@ -55,6 +55,7 @@
     bottom: -25px;
     left: 50%;
     transform: translate(-50%, 0);
+    color: #FFFF;
 }
 
 @mixin linea($clinea: variables.$rosa){

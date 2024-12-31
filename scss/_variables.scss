@@ -1,3 +1,31 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+         url('../fonts/Raleway-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'Raleway';
+    src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+         url('../fonts/Raleway-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSansCondensed';
+    src: url('./OpenSans_Condensed-Regular.woff2') format('woff2'),
+         url('./OpenSans_Condensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 $color-principal: #08A6E4;
 $rosa: #FB3B64;
-$verde: #55DFB4
+$verde: #55DFB4;
+
+$raleway: 'Raleway';
+$opensans: 'OpenSansCondensed';

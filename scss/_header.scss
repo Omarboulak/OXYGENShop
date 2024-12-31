@@ -1,8 +1,11 @@
+@use 'variables';
+
 header{
     height: 70px;
     width: 100%;
     box-shadow: 0px 3px 6px 0px #0000004A;
     position: relative;
+    font-family: variables.$opensans;
 }
 
 
@@ -85,7 +88,7 @@ nav{
         ul {
             list-style: none;
             display: flex;
-            gap: 65 px;
+            gap: 65px;
             
             li {
                 display: inline;

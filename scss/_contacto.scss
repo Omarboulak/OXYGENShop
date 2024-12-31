@@ -2,12 +2,13 @@
 
 .contact{
     padding: 2rem;
+    font-family: variables.$opensans;
     
     &__info{
         margin-bottom: 3rem;
         h2{
             font-size: 40px;
-            font-weight: 400;
+            font-family: variables.$raleway;
         }
         p{
             font-size: 16px;
@@ -90,7 +91,11 @@
         display: flex;
         justify-content: center;
         margin: 7rem;
+        gap: 5rem;
         &__info{
+            h2{
+                font-size: 49px;
+            }
             .info{
                 display: flex;
 
