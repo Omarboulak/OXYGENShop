@@ -29,6 +29,7 @@ nav{
     display: none;
     a{
         color: #A5A5A5;
+        font-size: 11px;
     }
 }
 
@@ -50,7 +51,7 @@ nav{
     }
 
     nav {
-        display: inline-block;
+        display: flex;
 
         ul {
             list-style: none;
@@ -58,7 +59,7 @@ nav{
             gap: 30px;
             
             li {
-                display: inline;
+
                 a {
                     height: 70px;
                     text-decoration: none;
@@ -88,20 +89,26 @@ nav{
     }
 
     nav {
-        display: inline-block;
 
         ul {
             list-style: none;
             display: flex;
             gap: 65px;
+            align-items: center;
             
             li {
-                display: inline;
+                display: block;
                 a {
+                    display: inline-block;
                     height: 70px;
                     text-decoration: none;
                     font-size: 11px;
                     font-weight: 700;
+                    line-height: 70px;
+                }
+                a:hover{
+                    border-bottom: 3px solid variables.$color-principal;
+                    color: black;
                 }
             }
         }
