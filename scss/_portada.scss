@@ -49,6 +49,17 @@
     display: none;
 }
 
+
+
+@media only screen and (min-width: 320px) {
+    .portada_contenido{
+        margin: 4rem auto 2rem; 
+        button{
+            width: 200px;
+        }
+    }
+}
+
 @media only screen and (min-width: 1200px) {
 
     .portada_contenido {

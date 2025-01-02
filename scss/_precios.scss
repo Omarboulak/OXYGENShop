@@ -111,7 +111,6 @@
 
 
 //Responsive para tablet 
-
 @media only screen and (min-width: 768px) {
 
     .precios {
@@ -121,14 +120,7 @@
         .precios__caja{
             display: flex;
 
-            .cantidad,
-            .propiedades {
-                display: block;
-                margin: 0;
-                width: 100%;
-                vertical-align: auto;
-                height: auto;
-            }
+            
 
             .cantidad{
                 width: 100%;
@@ -138,6 +130,24 @@
                 text-align: center;
                 padding-bottom: 3rem;
                 margin: 2rem;
+
+                .cantidad,
+                .propiedades {
+                    display: block;
+                    margin: 0;
+                    width: 100%;
+                    vertical-align: auto;
+                    height: auto;
+                }
+
+                .propiedades {    
+                    margin-top: 3rem;            
+                    ul li {
+                        list-style-position: inside;
+                        width: auto;   
+                    }
+                
+                }
             }
 
             .profesional{
@@ -149,11 +159,30 @@
                 box-shadow: 5px 10px 27px 0px #07ACE64A;
             }
 
-            .propiedades {                
-                li {
-                    list-style-position: inside;   
-                }
             
+        }
+    }
+}
+
+
+//Responsive para moviles pequeños 
+@media only screen and (min-width: 320px) {
+
+    .precios{
+        .basic, .profesional, .premium{
+            width: 85%;
+            .cantidad,
+            .propiedades {
+                margin: 0 1.4rem;
+                ul li{
+                    width: max-content;
+                }
+            }
+
+            .cantidad {
+                h4{
+                    font-size: 17px ;
+                }
             }
         }
     }

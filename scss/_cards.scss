@@ -21,134 +21,127 @@
             font-size: 30px;
             font-weight: 400;
             padding-left: 20px;
-            width: 60%;
+            width: 67%;
             font-family: variables.$raleway;
         }
 
-        //cambio el fondo del mack
-        .fondo-mack{
-            width: 90px;
-            height: 90px;
-            border-radius: 41px;
-            background-color: #FB3B64;
-            transform: rotate(45deg);
-            position: absolute;
-            right: 4.9rem;
-            top: 0
-        }
-
-
-        // cambio el fondo del movil
-        .fondo-movil{
-            width: 131px;
-            height: 135px;
-            border-radius: 50%;
-            background-color: variables.$color-principal;
-            position: absolute;
-            right: 8.1rem;
-            top: 8px;
+        hr{
+            display: none;
         }
 
         .grande{
             display: none;
         }
 
-    }
-    
-    .cards__first--img, 
-    .cards__shop--img, 
-    .cards__brand--img{
-        text-align: center;
-        position: relative;
-        padding-top: 15px;
-    
-        img{
+        .cards__first--img, 
+        .cards__shop--img, 
+        .cards__brand--img{
+            text-align: center;
             position: relative;
-            z-index:3;
+            padding-top: 15px;
+        
+            img{
+                position: relative;
+                z-index:3;
+            }
+
+
+            //cambio el fondo del mack
+            .fondo-mack{
+                width: 90px;
+                height: 90px;
+                border-radius: 41px;
+                background-color: #FB3B64;
+                transform: rotate(45deg);
+                position: absolute;
+                right: 4.9rem;
+                top: 0
+            }
+
+
+            // cambio el fondo del movil
+            .fondo-movil{
+                width: 131px;
+                height: 135px;
+                border-radius: 50%;
+                background-color: variables.$color-principal;
+                position: absolute;
+                right: 9.1rem;
+                top: 8px;
+            }
+        }
+
+        //cambio el fonodo del altavoz
+        .cards__brand--img{
+            background-color: #55DFB4;
+            padding-top: 0;
+            img{
+                transform: translate(-5%, 15%);
+            }
         }
     }
     
+
     
-    //cambio el fonodo del altavoz
-    .cards__brand--img{
-        background-color: #55DFB4;
-        padding-top: 0;
-        img{
-            transform: translate(-5%, 15%);
-        }
-    }
+    
+
 
 }
 
 
-@media only screen and (min-width: 1200px) {
+//movil mas pequeño
+@media only screen and (min-width: 320px)  and (max-width: 479px) {
+   
+    .cards{
+        .cards__{
+
+            .cards__first--img, 
+            .cards__shop--img, 
+            .cards__brand--img{
+                .fondo-mack{
+                    right: 1.5rem;
+                }
+            
+                .fondo-movil{
+                    right: 5.1rem;
+                }
+            }
+    
+            hr{
+                display: none;
+            }
+    
+            .cards__brand--img img{
+                width: 80%;
+                height: 11rem;
+            }
+        }
+    }
+ }
+ 
+//Tablet
+@media only screen and (min-width: 768px) {
 
     .cards{
         background-color: #F7F7F7;
         .cards__{
             display: flex;
             border: 1px solid #E8E9ED;
-            .pequenio{
-                display: none;
-            }
             
-            .grande{
-                display: block; 
-            }
-        }
-
-        .cards__tromp{
-            background-color: #F7F7F7;
-            border: 0;
-            .cards__cont{
-                background-color: #FFFF;
-                border: 1px solid #E8E9ED;
-            }
-        }
-
-        .cards__primer{
-            flex-direction: row-reverse;
-        }
-
-
-        .cards__cont{
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            width: 50%;
-            p{
-                width: 70%;
-            }
-
-            .hr-pc{
-                @include mixin.linea;
-            }
-
-            .hr-m{
-                @include mixin.linea($clinea: variables.$color-principal)
-            }
-
-            .hr-t{
-                @include mixin.linea($clinea: variables.$verde)               
-            }
-
-        }
-
+            //parte de la imagen de la card
         .cards__first--img, 
         .cards__shop--img, 
         .cards__brand--img{
             width: 50%;
             padding: 5rem 0 2rem;
             .fondo-mack{
-                width: 180px;
-                height: 180px;
+                right: 3rem;
                 top: 3rem;
             }
 
             .fondo-movil{
-                width: 320px;
-                height: 320px;
-                top: 4rem;
+                left: 4rem;
+                top: 4.5rem;
             }
 
             .movil{
@@ -160,23 +153,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 4rem;
+            margin-left: 1rem;
             border: 1px solid #E8E9ED;
         }
-    }
-}
-
-
-
-//Tablet
-@media only screen and (min-width: 768px) {
-
-    .cards{
-        background-color: #F7F7F7;
-        .cards__{
-            display: flex;
-            border: 1px solid #E8E9ED;
-            
         }
 
         .cards__tromp{
@@ -222,33 +201,120 @@
 
         }
 
-        //parte de la imagen de la card
-        .cards__first--img, 
-        .cards__shop--img, 
-        .cards__brand--img{
-            width: 50%;
-            padding: 5rem 0 2rem;
-            .fondo-mack{
-                right: 3rem;
-                top: 3rem;
-            }
+        
+    }
 
-            .fondo-movil{
-                left: 4rem;
-                top: 4.5rem;
-            }
+}
 
-            .movil{
-                margin-left: 2.5rem;
+//tablet mas grande
+@media only screen and (min-width: 980px) {
+   
+    .cards{
+        .cards__{
+            .cards__first--img, 
+            .cards__shop--img, 
+            .cards__brand--img{
+                .fondo-mack{
+                right: 5.5rem;
+                }
+            
+                .fondo-movil{
+                    left: 7rem;
+                }
             }
         }
+         
+    }
+ }
 
-        .cards__brand--img{
+// Responsive para ordenadores
+@media only screen and (min-width: 1200px) {
+
+    .cards{
+        background-color: #F7F7F7;
+        .cards__{
             display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 1rem;
             border: 1px solid #E8E9ED;
+            .pequenio{
+                display: none;
+            }
+            
+            .grande{
+                display: block; 
+            }
+
+            .cards__tromp{
+                background-color: #F7F7F7;
+                border: 0;
+                .cards__cont{
+                    background-color: #FFFF;
+                    border: 1px solid #E8E9ED;
+                }
+            }
+
+            .cards__primer{
+                flex-direction: row-reverse;
+            }
+
+
+            .cards__cont{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 50%;
+                p{
+                    width: 70%;
+                }
+
+                .hr-pc{
+                    @include mixin.linea;
+                }
+
+                .hr-m{
+                    @include mixin.linea($clinea: variables.$color-principal)
+                }
+
+                .hr-t{
+                    @include mixin.linea($clinea: variables.$verde)               
+                }
+
+            }
+
+            .cards__first--img, 
+            .cards__shop--img, 
+            .cards__brand--img{
+                width: 50%;
+                padding: 5rem 0 2rem;
+                .fondo-mack{
+                    width: 180px;
+                    height: 180px;
+                    top: 3rem;
+                }
+
+                .fondo-movil{
+                    width: 320px;
+                    height: 320px;
+                    top: 4rem;
+                }
+
+                .movil{
+                    margin-left: 2.5rem;
+                }
+            }
+
+            .cards__brand--img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 4rem;
+                border: 1px solid #E8E9ED;
+            }
         }
     }
 }
+
+
+
+
+
+
