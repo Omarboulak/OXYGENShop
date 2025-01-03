@@ -5,7 +5,7 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Raleway";
+  font-family: "Raleway-bold";
   src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
@@ -232,6 +232,7 @@ nav a {
   font-size: 20px;
   letter-spacing: 6px;
   margin-bottom: 20px;
+  font-family: "Raleway-bold";
 }
 .popu__caja p:last-of-type {
   font-size: 17px;
@@ -326,6 +327,9 @@ nav a {
 }
 .cards .cards__ hr {
   display: none;
+}
+.cards .cards__ .invisible {
+  color: white;
 }
 .cards .cards__ .grande {
   display: none;

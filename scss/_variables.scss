@@ -7,7 +7,7 @@
 }
   
 @font-face {
-    font-family: 'Raleway';
+    font-family: 'Raleway-bold';
     src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
          url('../fonts/Raleway-Bold.woff') format('woff');
     font-weight: 700;
@@ -28,4 +28,6 @@ $rosa: #FB3B64;
 $verde: #55DFB4;
 
 $raleway: 'Raleway';
+$raleway-bold: 'Raleway-bold';
+
 $opensans: 'OpenSansCondensed';

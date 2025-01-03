@@ -15,7 +15,6 @@
             padding: 20px;
             font-family: variables.$opensans;
         }
-    
         h3{
             margin-top: 2rem;
             font-size: 30px;
@@ -27,6 +26,10 @@
 
         hr{
             display: none;
+        }
+
+        .invisible{
+            color: white;
         }
 
         .grande{
@@ -235,6 +238,7 @@
         .cards__{
             display: flex;
             border: 1px solid #E8E9ED;
+
             .pequenio{
                 display: none;
             }
