@@ -130,6 +130,7 @@
                 text-align: center;
                 padding-bottom: 3rem;
                 margin: 2rem;
+                transition: transform .3s linear;
 
                 .cantidad,
                 .propiedades {
@@ -150,11 +151,7 @@
                 }
             }
 
-            .profesional{
-                transition: all 1s linear;
-            }
-
-            .profesional:hover{
+            .basic:hover, .profesional:hover, .premium:hover{
                 transform: scale(1.1);
                 box-shadow: 5px 10px 27px 0px #07ACE64A;
             }
@@ -163,7 +160,6 @@
         }
     }
 }
-
 
 //Responsive para moviles pequeños 
 @media only screen and (min-width: 320px) {

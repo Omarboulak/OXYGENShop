@@ -1,124 +1,124 @@
 @use 'variables';
 
+.cover{
+    //parte de texto de la portada
+    &__content{
+        text-align: center;
+        width: 80%;
+        margin: 7rem auto;
 
-//texto
-.portada_contenido{
-    text-align: center;
-    width: 80%;
-    margin: 7rem auto;
-
-
-    h1{
-        margin-bottom: 20px;
-        font-family: variables.$raleway;
+        h1{
+            margin-bottom: 20px;
+            font-family: variables.$raleway;
+        }
+    
+        p{
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    
+        button{
+            background-color: variables.$color-principal;
+            box-shadow: 5px 10px 14px 0px #07ACE64A;
+            border: 0;
+            padding: 20px 0;
+            width: 310px;
+            border-radius: 40px;
+            color: white;
+        }
     }
 
-    p{
-        font-size: 16px;
-        margin-bottom: 20px;
+    //imagen de la portada
+    &__img{
+        text-align: center;
+        height: 20rem;
+        width: 100%;
     }
 
-    button{
-        background-color: variables.$color-principal;
-        box-shadow: 5px 10px 14px 0px #07ACE64A;
-        border: 0;
-        padding: 20px 0;
-        width: 310px;
-        border-radius: 40px;
-        color: white;
+    &__img--small{
+        width: 100%;
+        background-image:url(../img/portada.png);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &__img--big{
+        display: none;
     }
     
-}
 
-
-//imagen
-.portada_img{
-    text-align: center;
-    height: 20rem;
-    width: 100%;
-}
-
-.portada_img--pequenia{
-    width: 100%;
-    background-image:url(../img/portada.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.portada_img--grande{
-    display: none;
-}
-
-
-
-@media only screen and (min-width: 320px) {
-    .portada_contenido{
-        margin: 4rem auto 2rem; 
-        button{
-            width: 200px;
-        }
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-
-    .portada_contenido {
-        margin-bottom: 3rem;
-        button{
-            width: 440px;
-
-        }
-        h1{
-            font-size: 41px;
+    
+    @media only screen and (min-width: 320px) {
+        &__content{
+            margin: 4rem auto 2rem; 
+            button{
+                width: 200px;
+            }
         }
     }
 
-    .portada_img--pequenia{
-        display: none;
-    }
+    @media only screen and (min-width: 1200px) {
+
+        &__content {
+            margin-bottom: 3rem;
+            button{
+                width: 440px;
+
+            }
+            h1{
+                font-size: 41px;
+            }
+        }
+
+        &__img--small{
+            display: none;
+        }
 
 
-    .portada_img{
-        height: 30rem;
-        width: 100%;
-    }
+        &__img{
+            height: 30rem;
+            width: 100%;
+        }
 
-    .portada_img--grande{
-        display: block;
-        width: 100%;
-        background-image:url(../img/img_escritorio.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-}
-
-
-@media only screen and (min-width: 768px) {
-
-    .portada_contenido {
-        margin-bottom: 3rem;
-        button{
-            width: 440px;
+        &__img--big{
+            display: block;
+            width: 100%;
+            background-image:url(../img/img_escritorio.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     }
 
-    .portada_img--pequenia{
-        display: none;
-    }
+    @media only screen and (min-width: 768px) {
+
+        &__content {
+            margin-bottom: 3rem;
+            button{
+                width: 440px;
+            }
+        }
+
+        &__img--small{
+            display: none;
+        }
 
 
-    .portada_img{
-        height: 30rem;
-        width: 100%;
+        &__img{
+            height: 30rem;
+            width: 100%;
+        }
+
+        &__img--big{
+            display: block;
+            width: 100%;
+            background-image:url(../img/img_escritorio.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
 
-    .portada_img--grande{
-        display: block;
-        width: 100%;
-        background-image:url(../img/img_escritorio.png);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
 }
+

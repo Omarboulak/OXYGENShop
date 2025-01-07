@@ -21,10 +21,6 @@
   padding: 0;
 }
 
-body {
-  width: 100%;
-}
-
 header {
   height: 70px;
   width: 100%;
@@ -113,20 +109,20 @@ nav a {
     color: black;
   }
 }
-.portada_contenido {
+.cover__content {
   text-align: center;
   width: 80%;
   margin: 7rem auto;
 }
-.portada_contenido h1 {
+.cover__content h1 {
   margin-bottom: 20px;
   font-family: "Raleway";
 }
-.portada_contenido p {
+.cover__content p {
   font-size: 16px;
   margin-bottom: 20px;
 }
-.portada_contenido button {
+.cover__content button {
   background-color: #08A6E4;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
   border: 0;
@@ -135,51 +131,47 @@ nav a {
   border-radius: 40px;
   color: white;
 }
-
-.portada_img {
+.cover__img {
   text-align: center;
   height: 20rem;
   width: 100%;
 }
-
-.portada_img--pequenia {
+.cover__img--small {
   width: 100%;
   background-image: url(../img/portada.png);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
-
-.portada_img--grande {
+.cover__img--big {
   display: none;
 }
-
 @media only screen and (min-width: 320px) {
-  .portada_contenido {
+  .cover__content {
     margin: 4rem auto 2rem;
   }
-  .portada_contenido button {
+  .cover__content button {
     width: 200px;
   }
 }
 @media only screen and (min-width: 1200px) {
-  .portada_contenido {
+  .cover__content {
     margin-bottom: 3rem;
   }
-  .portada_contenido button {
+  .cover__content button {
     width: 440px;
   }
-  .portada_contenido h1 {
+  .cover__content h1 {
     font-size: 41px;
   }
-  .portada_img--pequenia {
+  .cover__img--small {
     display: none;
   }
-  .portada_img {
+  .cover__img {
     height: 30rem;
     width: 100%;
   }
-  .portada_img--grande {
+  .cover__img--big {
     display: block;
     width: 100%;
     background-image: url(../img/img_escritorio.png);
@@ -189,20 +181,20 @@ nav a {
   }
 }
 @media only screen and (min-width: 768px) {
-  .portada_contenido {
+  .cover__content {
     margin-bottom: 3rem;
   }
-  .portada_contenido button {
+  .cover__content button {
     width: 440px;
   }
-  .portada_img--pequenia {
+  .cover__img--small {
     display: none;
   }
-  .portada_img {
+  .cover__img {
     height: 30rem;
     width: 100%;
   }
-  .portada_img--grande {
+  .cover__img--big {
     display: block;
     width: 100%;
     background-image: url(../img/img_escritorio.png);
@@ -211,6 +203,7 @@ nav a {
     background-repeat: no-repeat;
   }
 }
+
 .popu {
   text-align: center;
   width: 100%;
@@ -780,6 +773,7 @@ nav a {
     text-align: center;
     padding-bottom: 3rem;
     margin: 2rem;
+    transition: transform 0.3s linear;
   }
   .precios .precios__caja .basic .cantidad,
   .precios .precios__caja .basic .propiedades, .precios .precios__caja .profesional .cantidad,
@@ -798,10 +792,7 @@ nav a {
     list-style-position: inside;
     width: auto;
   }
-  .precios .precios__caja .profesional {
-    transition: all 1s linear;
-  }
-  .precios .precios__caja .profesional:hover {
+  .precios .precios__caja .basic:hover, .precios .precios__caja .profesional:hover, .precios .precios__caja .premium:hover {
     transform: scale(1.1);
     box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
   }
@@ -954,6 +945,7 @@ nav a {
 footer {
   box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
   padding: 0 2rem;
+  background-color: #F7F7F7;
 }
 footer .copy {
   display: inline-block;
