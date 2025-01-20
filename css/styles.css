@@ -22,30 +22,57 @@
 }
 
 header {
-  height: 70px;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   position: relative;
   font-family: "OpenSansCondensed";
 }
+header .container {
+  position: relative;
+}
 
-.logo, .menu {
+.logo {
+  padding: 1.8rem;
+  font-weight: 300;
+  font-size: 32px;
+  color: #08A6E4;
+}
+
+#menu_movile {
   position: absolute;
   top: 50%;
   left: 5%;
   transform: translate(0, -50%);
 }
 
-.menu {
+#menu_movile {
   left: 90%;
 }
 
-nav {
+#menu_movile {
+  border: 0;
+  background-color: white;
+}
+
+.nav_invisible {
   display: none;
 }
-nav a {
+
+.nav_visible {
+  display: block;
+}
+.nav_visible ul {
+  position: relative;
+  background-color: white;
+  padding: 0rem 2rem 1rem;
+}
+.nav_visible ul li {
+  padding-top: 1rem;
+  list-style: none;
+}
+.nav_visible ul li a {
+  text-decoration: none;
   color: #A5A5A5;
-  font-size: 11px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -54,24 +81,26 @@ nav a {
     align-items: center;
     justify-content: space-around;
   }
-  .logo {
+  header .logo {
     position: static;
     transform: translate(0);
   }
-  .menu {
+  header .menu {
     display: none;
   }
-  nav {
+  header .nav_invisible {
     display: flex;
   }
-  nav ul {
+  header .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 30px;
   }
-  nav ul li a {
+  header .nav_invisible ul li a {
     height: 70px;
     text-decoration: none;
+    font-size: 11px;
+    color: #A5A5A5;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -80,31 +109,32 @@ nav a {
     align-items: center;
     justify-content: space-around;
   }
-  .logo {
+  header .logo {
     position: static;
     transform: translate(0);
   }
-  .menu {
+  header .menu {
     display: none;
   }
-  nav ul {
+  header .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 65px;
     align-items: center;
   }
-  nav ul li {
+  header .nav_invisible ul li {
     display: block;
   }
-  nav ul li a {
+  header .nav_invisible ul li a {
     display: inline-block;
     height: 70px;
     text-decoration: none;
     font-size: 11px;
     font-weight: 700;
     line-height: 70px;
+    color: #A5A5A5;
   }
-  nav ul li a:hover {
+  header .nav_invisible ul li a:hover {
     border-bottom: 3px solid #08A6E4;
     color: black;
   }

@@ -8,10 +8,15 @@
     </head>
     <body>
         <header>
-                <img src="img/Logo.png" alt="logo de la pagina" class="logo">
-                <img src="img/Menu.png" alt="menu" class="menu">  
+            <div class="container">
+                <p class="logo">OXYGENShop</p>  
+                <button id="menu_movile">
+                    <img src="img/Menu.png" alt="menu" class="menu" id="menu">
+                </button>  
+            </div>
+
             
-            <nav>
+            <nav id="nav_open" class="nav_invisible">
                 <ul>
                     <li><a href="#popu">WHY US</a></li>
                     <li><a href="#beneficios">BENEFITS</a></li>
@@ -222,5 +227,8 @@
                 <img src="img/Facebook.png" alt="logo de facebook">
             </div>
         </footer>
+
+
+        <script src="js/menu.js"></script>
     </body>
 </html>
