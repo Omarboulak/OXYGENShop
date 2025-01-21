@@ -5,6 +5,10 @@
     padding: 0;
 }
 
+main{
+    margin-top: 12rem;
+}
+
 @mixin circulo($fondo: variables.$rosa){
     width: 63px;
     height: 63px;

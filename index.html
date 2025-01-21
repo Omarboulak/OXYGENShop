@@ -8,23 +8,29 @@
     </head>
     <body>
         <header>
-            <div class="container">
-                <p class="logo">OXYGENShop</p>  
-                <button id="menu_movile">
-                    <img src="img/Menu.png" alt="menu" class="menu" id="menu">
-                </button>  
-            </div>
+            <div class="header__contain">
+                <div class="container">
+                    <p class="logo">OXYGENShop</p>  
+                    <button id="menu_movile">
+                        <img src="img/Menu.png" alt="menu" class="menu" id="menu">
+                    </button>  
+                </div>
 
+                
+                <nav id="nav_open" class="nav_invisible">
+                    <ul>
+                        <li><a href="#popu">WHY US</a></li>
+                        <li><a href="#beneficios">BENEFITS</a></li>
+                        <li><a href="#precios">PRICES</a></li>
+                        <li><a href="#contacto">CONTACT</a></li>
+                    </ul>
+                </nav>
+            </div>
             
-            <nav id="nav_open" class="nav_invisible">
-                <ul>
-                    <li><a href="#popu">WHY US</a></li>
-                    <li><a href="#beneficios">BENEFITS</a></li>
-                    <li><a href="#precios">PRICES</a></li>
-                    <li><a href="#contacto">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header><!-- fi header -->
+            <div class="scroll">
+                <div id="percentage"></div>
+            </div>
+        </header><!-- fin header -->
 
 
         <main class="main">
@@ -228,7 +234,7 @@
             </div>
         </footer>
 
-
         <script src="js/menu.js"></script>
+        <script src="js/scroll.js"></script>
     </body>
 </html>
