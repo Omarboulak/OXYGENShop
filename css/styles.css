@@ -21,8 +21,22 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   margin-top: 12rem;
+}
+
+#backTop {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4rem;
+  bottom: 10rem;
+  border: 0;
 }
 
 header {
