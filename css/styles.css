@@ -1064,5 +1064,40 @@ footer .redes img {
     justify-content: space-evenly;
   }
 }
+#popup {
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 35%;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: fixed;
+  top: 3rem;
+}
+#popup #close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: 0;
+  background-color: white;
+}
+#popup #sendpopup {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: #08A6E4;
+  color: white;
+}
+#popup p {
+  font-size: 19px;
+  font-weight: 700;
+}
+#popup input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #95989A;
+  margin-top: 1.5rem;
+}
 
 /*# sourceMappingURL=styles.css.map */

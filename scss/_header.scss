@@ -1,8 +1,6 @@
 @use 'variables';
 
-
-
-header{
+header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -22,7 +20,7 @@ header{
         display: block;
         z-index: 5;
 
-        #percentage{
+        #percentage {
             position: relative;
             background-color: variables.$color-principal;
             width: 0%;
@@ -38,7 +36,7 @@ header{
     color: variables.$color-principal;
 }
 
-#menu_movile{
+#menu_movile { 
     position: absolute;
     top: 50%;
     left: 5%;
@@ -46,7 +44,7 @@ header{
 }
 
 
-#menu_movile{
+#menu_movile {
     left: 90%;
 }
 

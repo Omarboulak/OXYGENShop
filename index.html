@@ -201,27 +201,41 @@
                 </div><!-- fin info -->
 
                 <div class="contact__datos">
-                    <label for="nombre">NAME</label>
-                    <input type="text" id="nombre" class="rellenar">
+                    <form action="" method="post">
+                        <label for="nombre">NAME</label>
+                        <input type="text" id="name" class="rellenar">
 
-                    <label for="email">EMAIL</label>
-                    <input type="text" id="email" class="rellenar">
+                        <label for="email">EMAIL</label>
+                        <input type="text" id="email" class="rellenar">
 
-                        <div class="check-consent">
-                            <input type="checkbox" name="consent" class="consent">
-                       </div>
-                        <div class="label-consent">
-                            <label for="consent" >
-                                I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-                            </label>        
+                            <div class="check-consent">
+                                <input type="checkbox" name="consent" class="consent">
                         </div>
-                    <div class="btn-contact">
-                        <input type="button" value="send" name="enviar" class="enviar">        
-                    </div>
+                            <div class="label-consent">
+                                <label for="consent" >
+                                    I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+                                </label>        
+                            </div>
+                        <div class="btn-contact">
+                            <button type="submit" name="enviar" class="enviar">Send</button>        
+                        </div>
+                    </form>
                 </div><!-- fin datos -->
             </div>
 
             <button id="backTop"><img src="img/up.svg" alt="imagen con flecha hacia arriba"></button>
+
+            <dialog id="popup">
+                <button id="close"><img src="img/close.png" alt="boton para cerrar el popup"></button>
+                <p>Subscribe to our newsletter</p>
+
+                <form action="post" method="dialog">
+                    <label for="email">
+                        <input type="email" name="email" placeholder="Insert your email">
+                    </label> <br>
+                </form>
+                <button id="sendpopup" type="submit">Send</button>
+            </dialog>
         </main><!-- fin main-->
 
         <!-- SECCION FOOTER -->
@@ -239,5 +253,6 @@
         <script src="js/menu.js"></script>
         <script src="js/scroll.js"></script>
         <script src="js/backtop.js"></script>
+        <script src="js/popup.js"></script>
     </body>
 </html>

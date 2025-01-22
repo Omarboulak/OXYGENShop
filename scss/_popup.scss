@@ -1,0 +1,42 @@
+@use 'variables';
+
+#popup{
+    border: 1px solid black;
+    margin: 0 auto;
+    width: 35%;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 2rem;
+    position: fixed;
+    top: 3rem;
+
+    #close{
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        border: 0;
+        background-color: #ffff;
+    }
+
+    #sendpopup {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+        background-color: variables.$color-principal;
+        color: #ffff;
+    }
+
+    p{
+        font-size: 19px;
+        font-weight: 700;
+    } 
+
+    input{
+        width: 100%;
+        border: 0;
+        outline: none;
+        border-bottom: 1px solid #95989A;
+        margin-top: 1.5rem;
+    }
+    
+}
