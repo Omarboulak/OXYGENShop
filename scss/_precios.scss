@@ -4,6 +4,19 @@
 .precios {
     padding: 2rem 0;
     
+    #money{
+        background-color: variables.$color-principal;
+        color: #ffffff;
+        border: 0;
+        border-bottom: 2px solid #ffffff;
+        width: 218px;
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        margin: 2rem auto;
+    }
+
+
     .basic {
         @include mixin.precio;
     }

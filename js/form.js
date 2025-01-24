@@ -31,10 +31,9 @@ form.addEventListener('submit', (event) => {
 })
 
 
-const statusMessage = document.getElementById('status');
 
+// conexion a la api para validacion formulario
 const api = async () => {
-    statusMessage.textContent = 'Enviando datos...';
     try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
@@ -53,7 +52,6 @@ const api = async () => {
             console.error('Error en la respuesta:', response.status);
         }
     } catch (error) {
-        console.error('Error al llamar la API:', error);
-        statusMessage.textContent = 'Error al enviar los datos.';
+        console.error('Error al llamar la api:', error);
     }
 };

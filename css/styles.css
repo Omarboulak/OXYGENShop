@@ -646,6 +646,17 @@ header .scroll #percentage {
 .precios {
   padding: 2rem 0;
 }
+.precios #money {
+  background-color: #08A6E4;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  width: 218px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  margin: 2rem auto;
+}
 .precios .basic {
   width: 80%;
   border: 1px solid #FB3B64;
