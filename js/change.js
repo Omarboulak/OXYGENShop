@@ -1,5 +1,5 @@
 const selector = document.getElementById('money');
-const amountElements = document.querySelectorAll('.amount');
+const amount = document.querySelectorAll('.amount');
 
 selector.addEventListener('change', () => {
     const apiEndpoint = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json`;
@@ -7,7 +7,7 @@ selector.addEventListener('change', () => {
     fetch(apiEndpoint)
         .then((response) => {
             if (!response.ok) {
-                throw new Error("Failed to fetch exchange rates");
+                throw new Error("falied ");
             }
             return response.json();
         })
@@ -15,8 +15,7 @@ selector.addEventListener('change', () => {
             const valorEur = data.usd.eur;
             const valorGbp = data.usd.gbp;
 
-            amountElements.forEach((amountElement) => {
-                // Obtener el valor en USD del atributo `data-usd`
+            amount.forEach((amountElement) => {
                 const valorUsd = parseFloat(amountElement.getAttribute('data-usd'));
 
                 if (selector.value === 'eur') {
@@ -24,11 +23,11 @@ selector.addEventListener('change', () => {
                     const valorEnEuros = valorUsd * valorEur;
                     amountElement.textContent = `€${valorEnEuros.toFixed(2)}`;
                 } else if (selector.value === 'gbp') {
-                    // Convertir a libras esterlinas
+                    // Convertir a libras
                     const valorEnGbp = valorUsd * valorGbp;
                     amountElement.textContent = `£${valorEnGbp.toFixed(2)}`;
                 } else {
-                    // Mostrar los valores originales en dólares
+                    // Mostrar en dolar dólares
                     amountElement.textContent = `$${valorUsd.toFixed(2)}`;
                 }
             });
@@ -38,7 +37,7 @@ selector.addEventListener('change', () => {
         });
 });
 
-amountElements.forEach((amountElement, index) => {
+amount.forEach((amountElement, index) => {
     const valoresUsdPorDefecto = [0, 20, 60]; 
     amountElement.setAttribute('data-usd', valoresUsdPorDefecto[index]);
     amountElement.textContent = `$${valoresUsdPorDefecto[index].toFixed(2)}`;
