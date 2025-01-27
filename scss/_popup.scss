@@ -1,7 +1,7 @@
 @use 'variables';
 
 #popup{
-    border: 1px solid black;
+    border: 1px solid variables.$color-principal;
     margin: 0 auto;
     width: 35%;
     text-align: center;
@@ -9,6 +9,8 @@
     border-radius: 2rem;
     position: fixed;
     top: 3rem;
+    box-shadow: 3px 5px 8px rgba(8, 166, 228, 0.4), 
+    0 6px 20px rgba(8, 166, 228, 0.3);
 
     #close{
         position: absolute;

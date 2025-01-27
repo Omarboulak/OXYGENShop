@@ -38,7 +38,7 @@ selector.addEventListener('change', () => {
 });
 
 amount.forEach((amountElement, index) => {
-    const valoresUsdPorDefecto = [0, 20, 60]; 
-    amountElement.setAttribute('data-usd', valoresUsdPorDefecto[index]);
-    amountElement.textContent = `$${valoresUsdPorDefecto[index].toFixed(2)}`;
+    const porDefecto = [0, 20, 60]; 
+    amountElement.setAttribute('data-usd', porDefecto[index]);
+    amountElement.textContent = `$${porDefecto[index].toFixed(2)}`;
 });

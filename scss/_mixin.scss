@@ -21,6 +21,7 @@ main{
     right: 4rem;
     bottom: 10rem;
     border: 0;
+    z-index: 99;
 }
 
 @mixin circulo($fondo: variables.$rosa){
