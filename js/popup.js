@@ -4,7 +4,7 @@ const send = document.getElementById('sendpopup')
 const email = document.getElementById('emailpopup')
 const form = document.getElementById('formpopup')
 
-let closePopup = false;
+  let closePopup = false;
 
 setTimeout(() => {
     if (!closePopup) {
@@ -48,6 +48,7 @@ form.addEventListener('submit', (event) => {
     valid = false;
   } else {
     email.style.borderBottom = '1px solid green';
+    alert('Formulario enviado correctamente')
   }
 
   if (valid) {
