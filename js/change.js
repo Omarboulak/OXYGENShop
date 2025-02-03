@@ -1,4 +1,3 @@
-
 const selector = document.getElementById('money');
 const amount = document.querySelectorAll('.amount');
 

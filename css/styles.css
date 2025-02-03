@@ -22,12 +22,35 @@ main {
   z-index: 99;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 12rem;
+}
+
+#backTop {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4rem;
+  bottom: 10rem;
+  border: 0;
+  z-index: 99;
+}
+
 header {
+  position: fixed;
+  top: 0;
   position: fixed;
   top: 0;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
   font-family: "OpenSansCondensed";
+  z-index: 9;
+  background-color: white;
   z-index: 9;
   background-color: white;
 }
@@ -98,25 +121,31 @@ header .scroll #percentage {
 
 @media only screen and (min-width: 768px) {
   .header__contain {
+  .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   .header__contain .logo {
+  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
   .header__contain .menu {
+  .header__contain .menu {
     display: none;
   }
   .header__contain .nav_invisible {
+  .header__contain .nav_invisible {
     display: flex;
   }
+  .header__contain .nav_invisible ul {
   .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 30px;
   }
+  .header__contain .nav_invisible ul li a {
   .header__contain .nav_invisible ul li a {
     height: 70px;
     text-decoration: none;
@@ -126,17 +155,21 @@ header .scroll #percentage {
 }
 @media only screen and (min-width: 1200px) {
   .header__contain {
+  .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   .header__contain .logo {
+  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
   .header__contain .menu {
+  .header__contain .menu {
     display: none;
   }
+  .header__contain .nav_invisible ul {
   .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
@@ -144,8 +177,10 @@ header .scroll #percentage {
     align-items: center;
   }
   .header__contain .nav_invisible ul li {
+  .header__contain .nav_invisible ul li {
     display: block;
   }
+  .header__contain .nav_invisible ul li a {
   .header__contain .nav_invisible ul li a {
     display: inline-block;
     height: 70px;
@@ -155,6 +190,7 @@ header .scroll #percentage {
     line-height: 70px;
     color: #A5A5A5;
   }
+  .header__contain .nav_invisible ul li a:hover {
   .header__contain .nav_invisible ul li a:hover {
     border-bottom: 3px solid #08A6E4;
     color: black;
@@ -641,6 +677,17 @@ header .scroll #percentage {
 }
 .precios {
   padding: 2rem 0;
+}
+.precios #money {
+  background-color: #08A6E4;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  width: 218px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  margin: 2rem auto;
 }
 .precios #money {
   background-color: #08A6E4;

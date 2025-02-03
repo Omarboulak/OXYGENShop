@@ -6,7 +6,6 @@ const position = document.querySelectorAll('.circle-pos');
 
 let principal = 0;
 
-
 function circlePosition() {
   position.forEach((circle, index) => {
     if (index === principal) {
@@ -17,6 +16,7 @@ function circlePosition() {
   });
 }
 
+
 left.addEventListener('click', () => {
   principal -= 1;
   if (principal < 0) {
@@ -24,6 +24,7 @@ left.addEventListener('click', () => {
   }
   slideCont.style.transform = `translateX(-${principal * 100}%)`;
   circlePosition()
+
 });
 
 right.addEventListener('click', () => {
@@ -33,26 +34,31 @@ right.addEventListener('click', () => {
   }
   slideCont.style.transform = `translateX(-${principal * 100}%)`;
   circlePosition()
+
 });
 
 position.forEach((circle, index) => {
   circle.addEventListener('click', () => {
     principal = index; 
     slideCont.style.transform = `translateX(-${principal * 100}%)`;
+
     circlePosition()
+
   });
 });
 
 
-function autoSlide() {
+
+function AutoSlide() {
   setInterval(() => {
     principal += 1;
     if (principal >= slides.length) {
       principal = 0;
     }
     slideCont.style.transform = `translateX(-${principal * 100}%)`;
-    circlePosition()
+    circlePosition(); 
   }, 5000);
 }
 
-autoSlide();
+startAutoSlide();
+
