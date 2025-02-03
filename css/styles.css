@@ -121,31 +121,25 @@ header .scroll #percentage {
 
 @media only screen and (min-width: 768px) {
   .header__contain {
-  .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   .header__contain .logo {
-  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
   .header__contain .menu {
-  .header__contain .menu {
     display: none;
   }
   .header__contain .nav_invisible {
-  .header__contain .nav_invisible {
     display: flex;
   }
-  .header__contain .nav_invisible ul {
   .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 30px;
   }
-  .header__contain .nav_invisible ul li a {
   .header__contain .nav_invisible ul li a {
     height: 70px;
     text-decoration: none;
@@ -153,23 +147,20 @@ header .scroll #percentage {
     color: #A5A5A5;
   }
 }
+
 @media only screen and (min-width: 1200px) {
-  .header__contain {
   .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
   .header__contain .logo {
-  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
   .header__contain .menu {
-  .header__contain .menu {
     display: none;
   }
-  .header__contain .nav_invisible ul {
   .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
@@ -177,10 +168,8 @@ header .scroll #percentage {
     align-items: center;
   }
   .header__contain .nav_invisible ul li {
-  .header__contain .nav_invisible ul li {
     display: block;
   }
-  .header__contain .nav_invisible ul li a {
   .header__contain .nav_invisible ul li a {
     display: inline-block;
     height: 70px;
@@ -190,7 +179,6 @@ header .scroll #percentage {
     line-height: 70px;
     color: #A5A5A5;
   }
-  .header__contain .nav_invisible ul li a:hover {
   .header__contain .nav_invisible ul li a:hover {
     border-bottom: 3px solid #08A6E4;
     color: black;
