@@ -2,13 +2,15 @@
 
 .contact{
     padding: 2rem;
-    font-family: variables.$opensans;
+    font-family: 'Open Sans';
+    font-weight: 600;
     
     &__info{
         margin-bottom: 3rem;
         h2{
             font-size: 40px;
-            font-family: variables.$raleway;
+            font-family: 'Raleway';
+            font-weight: 400;
         }
         p{
             font-size: 16px;
@@ -36,7 +38,15 @@
             margin-bottom: 1.5rem; 
             color: variables.$color-principal;
             font-size: 11px;
-            font-weight: 600;
+        }
+
+        #errorName, #errorEmail{
+            color: red;
+            font-family: 'Open Sans';
+            font-weight: 400;
+            font-size: 11px;
+            display: none;
+            margin-left: 1rem;
         }
 
         .rellenar{
@@ -92,6 +102,7 @@
             border: 0;
             margin-top: 1.5rem;
             color: #FFFF;
+            font-weight: 700;
         }
 
         .btn-contact{

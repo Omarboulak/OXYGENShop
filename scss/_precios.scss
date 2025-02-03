@@ -4,6 +4,19 @@
 .precios {
     padding: 2rem 0;
     
+    #money{
+        background-color: variables.$color-principal;
+        color: #ffffff;
+        border: 0;
+        border-bottom: 2px solid #ffffff;
+        width: 218px;
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+        margin: 2rem auto;
+    }
+
+
     .basic {
         @include mixin.precio;
     }
@@ -19,11 +32,13 @@
     h2{
         text-align: center;
         font-size: 36px;
-        font-family: variables.$raleway;
+        font-family: 'Raleway';
+        font-weight: 400;
     }
 
     h4{
-        font-family: variables.$raleway;
+        font-family: 'Raleway';
+        font-weight: 700;
     }
 
     .cantidad,
@@ -32,11 +47,12 @@
         margin: 0 2rem;
         width: 30%;
         vertical-align: middle;
-        font-family: variables.$opensans;
     }
 
     .cantidad p:last-of-type{
-        font-family: variables.$raleway;
+        font-family: 'Raleway';
+        font-weight: 700;
+        font-size: 12px;
     }
 
     .propiedades {
@@ -45,6 +61,8 @@
         li {
             margin-bottom: 15px; 
             list-style-image: url(../img/Checkbox.png);
+            font-family: 'Open Sans';
+            font-weight: 400;
         }
 
         .no-p{

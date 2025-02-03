@@ -1,8 +1,28 @@
+
 @use 'variables';
 
 *{
     margin: 0;
     padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    margin-top: 12rem;
+}
+
+#backTop{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    position: fixed;
+    right: 4rem;
+    bottom: 10rem;
+    border: 0;
+    z-index: 99;
 }
 
 @mixin circulo($fondo: variables.$rosa){
@@ -34,6 +54,7 @@
         p:first-of-type{
             font-size: 46px;
             font-weight: 300;
+            font-family: 'Open Sans';
             color: $cborde;
         }
 
@@ -56,6 +77,8 @@
     left: 50%;
     transform: translate(-50%, 0);
     color: #FFFF;
+    font-family: 'Open Sans';
+    font-weight: 700;
 }
 
 @mixin linea($clinea: variables.$rosa){

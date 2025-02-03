@@ -13,7 +13,7 @@
             font-size: 14px;
             font-weight: 400;
             padding: 20px;
-            font-family: variables.$opensans;
+            font-family: 'Open Sans';
         }
         h3{
             margin-top: 2rem;
@@ -21,7 +21,7 @@
             font-weight: 400;
             padding-left: 20px;
             width: 67%;
-            font-family: variables.$raleway;
+            font-family: 'Raleway';
         }
 
         hr{
@@ -83,12 +83,6 @@
             }
         }
     }
-    
-
-    
-    
-
-
 }
 
 
@@ -299,6 +293,7 @@
                     width: 320px;
                     height: 320px;
                     top: 4rem;
+                    left: 3rem;
                 }
 
                 .movil{

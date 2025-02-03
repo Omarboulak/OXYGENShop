@@ -5,29 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&family=Raleway:wght@100;400;700;900&display=swap">
     </head>
     <body>
+
         <header>
-            <div class="container">
-                <p class="logo">OXYGENShop</p>  
-                <button id="menu_movile">
-                    <img src="img/Menu.png" alt="menu" class="menu" id="menu">
-                </button>  
+            <div class="header__contain">
+                <div class="container">
+                    <p class="logo">OXYGENShop</p>  
+                    <button id="menu_movile">
+                        <img src="img/Menu.png" alt="menu" class="menu" id="menu">
+                    </button>  
+                </div>
+
+                
+                <nav id="nav_open" class="nav_invisible">
+                    <ul>
+                        <li><a href="#popu">WHY US</a></li>
+                        <li><a href="#beneficios">BENEFITS</a></li>
+                        <li><a href="#precios">PRICES</a></li>
+                        <li><a href="#contacto">CONTACT</a></li>
+                    </ul>
+                </nav>
             </div>
 
-            
-            <nav id="nav_open" class="nav_invisible">
-                <ul>
-                    <li><a href="#popu">WHY US</a></li>
-                    <li><a href="#beneficios">BENEFITS</a></li>
-                    <li><a href="#precios">PRICES</a></li>
-                    <li><a href="#contacto">CONTACT</a></li>
-                </ul>
-            </nav>
-        </header><!-- fi header -->
-
+            <div class="scroll">
+                <div id="percentage"></div>
+            </div>
+        </header><!-- fin header -->
 
         <main class="main">
+
             <!-- SECCION PORTADA -->           
             <div class="cover">
                 <div class="cover__content">
@@ -39,7 +48,6 @@
 
                 <div class="cover__img cover__img--big"></div>
             </div><!-- fin portada -->
-
 
             <!-- SECCION POPULARIDAD -->           
             <div class="popu" id="popu">
@@ -89,9 +97,12 @@
 
                 <div class="cards__">
                     <div class="cards__shop--img">
-                        <img src="img/movil.png" alt="imagen de una trompeta" class="pequenio">
-                        <img src="img/movil-pc.png" alt="imagen de un protatil" class="grande movil">
-                        <div class="fondo-movil"></div>
+                        <div class="cont">
+                            <img src="img/movil.png" alt="imagen de una trompeta" class="pequenio">
+                            <img src="img/movil-pc.png" alt="imagen de un protatil" class="grande movil">
+                            <div class="fondo-movil"></div>
+                        </div>
+
                     </div>
                     <div class="cards__cont">
                         <h3>Your shop is where you are!</h3>
@@ -113,16 +124,20 @@
                 </div><!-- fin cards__brand -->
             </div>
 
-
             <!-- SECCION PRECIOS -->           
             <div class="precios" id="precios">
 
                 <h2>Pricing</h2>
+                <select name="money" id="money">
+                    <option value="usd">USD $</option>
+                    <option value="eur">EUR €</option>
+                    <option value="gbp">GBP £</option>
+                </select>
                 <div class="precios__caja">
                     <div class="basic">
                         <div class="cantidad">
                             <h4>Basic</h4>
-                            <p>$0</p>
+                            <p class="amount">$0</p>
                         </div>
                         <div class="propiedades">
                             <ul>
@@ -139,7 +154,7 @@
                     <div class="profesional">
                         <div class="cantidad">
                             <h4>Professional</h4>
-                            <p>$25</p>
+                            <p class="amount" data-usd="25">$25</p>
                             <p>Last offer</p>
                         </div>
                         <div class="propiedades">
@@ -157,7 +172,7 @@
                     <div class="premium">
                         <div class="cantidad">
                             <h4>Premium</h4>
-                            <p>$60</p>
+                            <p class="amount" data-usd="60">$60</p>
                             <p>Last offer</p>
                         </div>
                         <div class="propiedades">
@@ -195,25 +210,63 @@
                 </div><!-- fin info -->
 
                 <div class="contact__datos">
-                    <label for="nombre">NAME</label>
-                    <input type="text" id="nombre" class="rellenar">
+                    <form action="" method="post" id="form">
+                        <label for="nombre">NAME</label>
+                        <input type="text" id="name" class="rellenar">
+                        <p id="errorName">El nombre debe de tener entre 2 y 100 caracteres</p>
 
-                    <label for="email">EMAIL</label>
-                    <input type="text" id="email" class="rellenar">
+                        <label for="email">EMAIL</label>
+                        <input type="text" id="email" class="rellenar">
+                        <p id="errorEmail">El formato del email introducido es invalido</p>
 
                         <div class="check-consent">
-                            <input type="checkbox" name="consent" class="consent">
-                       </div>
-                        <div class="label-consent">
-                            <label for="consent" >
-                                I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
-                            </label>        
+                            <input type="checkbox" name="consent" class="consent" id="consent">
                         </div>
-                    <div class="btn-contact">
-                        <input type="button" value="send" name="enviar" class="enviar">        
-                    </div>
+                            <div class="label-consent">
+                                <label for="consent" >
+                                    I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)
+                                </label>        
+                            </div>
+                        <div class="btn-contact">
+                            <button type="submit" name="sendform" value="Send" class="enviar" id="sendform">Send</button>    
+                        </div>
+                    </form>
+
                 </div><!-- fin datos -->
             </div>
+
+            <button id="backTop"><img src="img/up.svg" alt="imagen con flecha hacia arriba"></button>
+
+            <dialog id="popup">
+                <button id="close">
+                  <img src="img/close.png" alt="boton para cerrar el popup">
+                </button>
+                <p>Subscribe to our newsletter</p>
+              
+                <form action="#" method="post" id="formpopup">
+                  <label for="email">
+                    <input type="email" name="email" id="emailpopup" placeholder="Insert your email">
+                  </label>
+                  <br>
+                  <button id="sendpopup" type="submit">Send</button>
+                </form>
+            </dialog>
+
+            <div id="slider">
+                <button id="left"><img src="img/left.svg" alt=""></button>
+                <div id="slide">
+                    <div class="window"><img src="img/movil-pc.png" alt=""></div>
+                    <div class="window"><img src="img/Macbook-pc.png" alt=""></div>
+                    <div class="window"><img src="img/trompeta.png"  alt=""></div>
+                </div>
+                <button id="right"><img src="img/right.svg" alt=""></button>
+                <div class="position">
+                    <button class="circle-pos"></button>
+                    <button class="circle-pos"></button>
+                    <button class="circle-pos"></button>
+                </div>
+            </div>
+
         </main><!-- fin main-->
 
         <!-- SECCION FOOTER -->
@@ -228,7 +281,12 @@
             </div>
         </footer>
 
-
         <script src="js/menu.js"></script>
+        <script src="js/scroll.js"></script>
+        <script src="js/backtop.js"></script>
+        <!-- <script src="js/popup.js"></script> -->
+        <script src="js/form.js"></script>
+        <script src="js/change.js"></script>
+        <script src="js/slider.js"></script>
     </body>
 </html>

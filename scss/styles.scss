@@ -1,8 +1,10 @@
 @use "mixin";
 @use "header";
-@use "portada";
+@use "cover";
 @use 'popularidad';
 @use 'cards';
 @use 'precios';
 @use 'contacto';
 @use 'footer';
+@use 'popup';
+@use 'slider'

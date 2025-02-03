@@ -9,6 +9,7 @@
 
     h2{
         font-size: 30px;
+        font-family: 'Raleway';
         font-weight: 400;
         width: 80%;
         margin: 0 auto;
@@ -23,7 +24,7 @@
         font-size: 20px;
         letter-spacing: 6px;
         margin-bottom: 20px;
-        font-family: variables.$raleway-bold;
+        font-family: 'Raleway';
     }
 
     p:last-of-type{
@@ -32,6 +33,7 @@
         color: #A5A5A5;
         width: 80%;
         margin: 0 auto;
+        font-family: 'Raleway';
     }
 }
 

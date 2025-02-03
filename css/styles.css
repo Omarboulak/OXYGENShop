@@ -1,34 +1,51 @@
-@font-face {
-  font-family: "Raleway";
-  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: "Raleway-bold";
-  src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "OpenSansCondensed";
-  src: url("./OpenSans_Condensed-Regular.woff2") format("woff2"), url("./OpenSans_Condensed-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  margin-top: 12rem;
+}
+
+#backTop {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 4rem;
+  bottom: 10rem;
+  border: 0;
+  z-index: 99;
+}
+
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
-  position: relative;
   font-family: "OpenSansCondensed";
+  z-index: 9;
+  background-color: white;
 }
 header .container {
   position: relative;
+}
+header .scroll {
+  width: 100%;
+  height: 0.5rem;
+  display: block;
+  z-index: 5;
+  background-color: transparent;
+}
+header .scroll #percentage {
+  position: relative;
+  background-color: #08A6E4;
+  width: 0%;
+  height: 0.5rem;
 }
 
 .logo {
@@ -36,6 +53,7 @@ header .container {
   font-weight: 300;
   font-size: 32px;
   color: #08A6E4;
+  font-family: "Raleway";
 }
 
 #menu_movile {
@@ -73,30 +91,33 @@ header .container {
 .nav_visible ul li a {
   text-decoration: none;
   color: #A5A5A5;
+  font-size: 11px;
+  font-family: "Open Sans";
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 768px) {
-  header {
+  .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-  header .logo {
+  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
-  header .menu {
+  .header__contain .menu {
     display: none;
   }
-  header .nav_invisible {
+  .header__contain .nav_invisible {
     display: flex;
   }
-  header .nav_invisible ul {
+  .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 30px;
   }
-  header .nav_invisible ul li a {
+  .header__contain .nav_invisible ul li a {
     height: 70px;
     text-decoration: none;
     font-size: 11px;
@@ -104,28 +125,28 @@ header .container {
   }
 }
 @media only screen and (min-width: 1200px) {
-  header {
+  .header__contain {
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-  header .logo {
+  .header__contain .logo {
     position: static;
     transform: translate(0);
   }
-  header .menu {
+  .header__contain .menu {
     display: none;
   }
-  header .nav_invisible ul {
+  .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
     gap: 65px;
     align-items: center;
   }
-  header .nav_invisible ul li {
+  .header__contain .nav_invisible ul li {
     display: block;
   }
-  header .nav_invisible ul li a {
+  .header__contain .nav_invisible ul li a {
     display: inline-block;
     height: 70px;
     text-decoration: none;
@@ -134,7 +155,7 @@ header .container {
     line-height: 70px;
     color: #A5A5A5;
   }
-  header .nav_invisible ul li a:hover {
+  .header__contain .nav_invisible ul li a:hover {
     border-bottom: 3px solid #08A6E4;
     color: black;
   }
@@ -147,10 +168,13 @@ header .container {
 .cover__content h1 {
   margin-bottom: 20px;
   font-family: "Raleway";
+  font-weight: 400;
 }
 .cover__content p {
   font-size: 16px;
   margin-bottom: 20px;
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 .cover__content button {
   background-color: #08A6E4;
@@ -160,6 +184,9 @@ header .container {
   width: 310px;
   border-radius: 40px;
   color: white;
+  font-size: 16px;
+  font-family: "Open Sans";
+  font-weight: 700;
 }
 .cover__img {
   text-align: center;
@@ -242,6 +269,7 @@ header .container {
 }
 .popu h2 {
   font-size: 30px;
+  font-family: "Raleway";
   font-weight: 400;
   width: 80%;
   margin: 0 auto;
@@ -255,7 +283,7 @@ header .container {
   font-size: 20px;
   letter-spacing: 6px;
   margin-bottom: 20px;
-  font-family: "Raleway-bold";
+  font-family: "Raleway";
 }
 .popu__caja p:last-of-type {
   font-size: 17px;
@@ -263,6 +291,7 @@ header .container {
   color: #A5A5A5;
   width: 80%;
   margin: 0 auto;
+  font-family: "Raleway";
 }
 
 .popu__img {
@@ -338,7 +367,7 @@ header .container {
   font-size: 14px;
   font-weight: 400;
   padding: 20px;
-  font-family: "OpenSansCondensed";
+  font-family: "Open Sans";
 }
 .cards .cards__ h3 {
   margin-top: 2rem;
@@ -595,6 +624,7 @@ header .container {
     width: 320px;
     height: 320px;
     top: 4rem;
+    left: 3rem;
   }
   .cards .cards__ .cards__first--img .movil,
   .cards .cards__ .cards__shop--img .movil,
@@ -611,6 +641,17 @@ header .container {
 }
 .precios {
   padding: 2rem 0;
+}
+.precios #money {
+  background-color: #08A6E4;
+  color: #ffffff;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  width: 218px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  margin: 2rem auto;
 }
 .precios .basic {
   width: 80%;
@@ -631,6 +672,7 @@ header .container {
 .precios .basic .cantidad p:first-of-type {
   font-size: 46px;
   font-weight: 300;
+  font-family: "Open Sans";
   color: #FB3B64;
 }
 .precios .basic .cantidad p {
@@ -657,6 +699,7 @@ header .container {
 .precios .profesional .cantidad p:first-of-type {
   font-size: 46px;
   font-weight: 300;
+  font-family: "Open Sans";
   color: #08A6E4;
 }
 .precios .profesional .cantidad p {
@@ -683,6 +726,7 @@ header .container {
 .precios .premium .cantidad p:first-of-type {
   font-size: 46px;
   font-weight: 300;
+  font-family: "Open Sans";
   color: #55DFB4;
 }
 .precios .premium .cantidad p {
@@ -694,9 +738,11 @@ header .container {
   text-align: center;
   font-size: 36px;
   font-family: "Raleway";
+  font-weight: 400;
 }
 .precios h4 {
   font-family: "Raleway";
+  font-weight: 700;
 }
 .precios .cantidad,
 .precios .propiedades {
@@ -704,10 +750,11 @@ header .container {
   margin: 0 2rem;
   width: 30%;
   vertical-align: middle;
-  font-family: "OpenSansCondensed";
 }
 .precios .cantidad p:last-of-type {
   font-family: "Raleway";
+  font-weight: 700;
+  font-size: 12px;
 }
 .precios .propiedades {
   margin-left: 2rem;
@@ -715,6 +762,8 @@ header .container {
 .precios .propiedades li {
   margin-bottom: 15px;
   list-style-image: url(../img/Checkbox.png);
+  font-family: "Open Sans";
+  font-weight: 400;
 }
 .precios .propiedades .no-p {
   list-style-image: url(../img/Cross.png);
@@ -730,6 +779,8 @@ header .container {
   left: 50%;
   transform: translate(-50%, 0);
   color: white;
+  font-family: "Open Sans";
+  font-weight: 700;
 }
 .precios .boton-prof {
   width: 150px;
@@ -742,6 +793,8 @@ header .container {
   left: 50%;
   transform: translate(-50%, 0);
   color: white;
+  font-family: "Open Sans";
+  font-weight: 700;
 }
 .precios .boton-prem {
   width: 150px;
@@ -754,6 +807,8 @@ header .container {
   left: 50%;
   transform: translate(-50%, 0);
   color: white;
+  font-family: "Open Sans";
+  font-weight: 700;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -849,7 +904,8 @@ header .container {
 }
 .contact {
   padding: 2rem;
-  font-family: "OpenSansCondensed";
+  font-family: "Open Sans";
+  font-weight: 600;
 }
 .contact__info {
   margin-bottom: 3rem;
@@ -857,6 +913,7 @@ header .container {
 .contact__info h2 {
   font-size: 40px;
   font-family: "Raleway";
+  font-weight: 400;
 }
 .contact__info p {
   font-size: 16px;
@@ -879,7 +936,14 @@ header .container {
   margin-bottom: 1.5rem;
   color: #08A6E4;
   font-size: 11px;
-  font-weight: 600;
+}
+.contact__datos #errorName, .contact__datos #errorEmail {
+  color: red;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 11px;
+  display: none;
+  margin-left: 1rem;
 }
 .contact__datos .rellenar {
   width: 100%;
@@ -926,6 +990,7 @@ header .container {
   border: 0;
   margin-top: 1.5rem;
   color: white;
+  font-weight: 700;
 }
 .contact__datos .btn-contact {
   text-align: right;
@@ -1028,6 +1093,110 @@ footer .redes img {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+  }
+}
+#popup {
+  border: 1px solid #08A6E4;
+  margin: 0 auto;
+  width: 35%;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 2rem;
+  position: fixed;
+  top: 3rem;
+  box-shadow: 3px 5px 8px rgba(8, 166, 228, 0.4), 0 6px 20px rgba(8, 166, 228, 0.3);
+}
+#popup #close {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  border: 0;
+  background-color: white;
+}
+#popup #sendpopup {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: #08A6E4;
+  color: white;
+}
+#popup p {
+  font-size: 19px;
+  font-weight: 700;
+}
+#popup input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-bottom: 1px solid #95989A;
+  margin-top: 1.5rem;
+}
+
+#slider {
+  position: relative;
+  width: 100%;
+  margin: 5rem auto;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+}
+#slider #slide {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+#slider #slide .window {
+  min-width: 100%;
+  max-height: 20rem;
+  text-align: center;
+}
+#slider #slide .window img {
+  width: 100%;
+  height: 20rem;
+}
+#slider #slide:last-child {
+  border-right: none;
+}
+#slider #right,
+#slider #left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  z-index: 4;
+  background-color: transparent;
+}
+#slider #left {
+  left: 10px;
+}
+#slider #right {
+  right: 10px;
+}
+#slider .position {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#slider .circle-pos {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  margin-left: 1rem;
+  border: 4px solid #08A6E4;
+}
+
+@media only screen and (min-width: 768px) {
+  #slider {
+    width: 80%;
+  }
+  #slider #slide .window {
+    max-height: 30rem;
+  }
+  #slider #slide .window img {
+    width: 100%;
+    height: 30rem;
   }
 }
 
