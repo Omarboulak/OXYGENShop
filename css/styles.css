@@ -20,51 +20,33 @@ main {
   bottom: 10rem;
   border: 0;
   z-index: 99;
+  display: none;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-main {
-  margin-top: 12rem;
-}
-
-#backTop {
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  position: fixed;
-  right: 4rem;
-  bottom: 10rem;
-  border: 0;
-  z-index: 99;
+button {
+  cursor: pointer;
 }
 
 header {
   position: fixed;
   top: 0;
-  position: fixed;
-  top: 0;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
-  font-family: "OpenSansCondensed";
-  z-index: 9;
-  background-color: white;
+  font-family: "OpenSans";
   z-index: 9;
   background-color: white;
 }
 header .container {
   position: relative;
 }
-header .scroll {
+header #scroll {
   width: 100%;
   height: 0.5rem;
-  display: block;
+  display: none;
   z-index: 5;
   background-color: transparent;
 }
-header .scroll #percentage {
+header #scroll #percentage {
   position: relative;
   background-color: #08A6E4;
   width: 0%;
@@ -138,16 +120,27 @@ header .scroll #percentage {
   .header__contain .nav_invisible ul {
     list-style: none;
     display: flex;
-    gap: 30px;
+    gap: 55px;
+    align-items: center;
+  }
+  .header__contain .nav_invisible ul li {
+    display: block;
   }
   .header__contain .nav_invisible ul li a {
-    height: 70px;
+    display: inline-block;
+    height: 91px;
     text-decoration: none;
     font-size: 11px;
+    font-weight: 700;
+    line-height: 91px;
     color: #A5A5A5;
+    padding: 0 1rem;
+  }
+  .header__contain .nav_invisible ul li a:hover {
+    border-bottom: 4px solid #08A6E4;
+    color: black;
   }
 }
-
 @media only screen and (min-width: 1200px) {
   .header__contain {
     display: flex;
@@ -172,15 +165,16 @@ header .scroll #percentage {
   }
   .header__contain .nav_invisible ul li a {
     display: inline-block;
-    height: 70px;
+    height: 91px;
     text-decoration: none;
     font-size: 11px;
     font-weight: 700;
-    line-height: 70px;
+    line-height: 91px;
     color: #A5A5A5;
+    padding: 0 1rem;
   }
   .header__contain .nav_invisible ul li a:hover {
-    border-bottom: 3px solid #08A6E4;
+    border-bottom: 4px solid #08A6E4;
     color: black;
   }
 }
@@ -290,6 +284,7 @@ header .scroll #percentage {
   width: 100%;
   font-family: "Raleway";
   padding-bottom: 5rem;
+  padding-top: 3rem;
 }
 .popu h2 {
   font-size: 30px;
@@ -677,17 +672,6 @@ header .scroll #percentage {
   display: block;
   margin: 2rem auto;
 }
-.precios #money {
-  background-color: #08A6E4;
-  color: #ffffff;
-  border: 0;
-  border-bottom: 2px solid #ffffff;
-  width: 218px;
-  font-size: 14px;
-  font-weight: 400;
-  display: block;
-  margin: 2rem auto;
-}
 .precios .basic {
   width: 80%;
   border: 1px solid #FB3B64;
@@ -938,7 +922,7 @@ header .scroll #percentage {
   }
 }
 .contact {
-  padding: 2rem;
+  padding: 6rem 2rem 4rem;
   font-family: "Open Sans";
   font-weight: 600;
 }
@@ -1140,6 +1124,7 @@ footer .redes img {
   position: fixed;
   top: 3rem;
   box-shadow: 3px 5px 8px rgba(8, 166, 228, 0.4), 0 6px 20px rgba(8, 166, 228, 0.3);
+  font-family: "Open Sans";
 }
 #popup #close {
   position: absolute;
@@ -1154,9 +1139,13 @@ footer .redes img {
   border-radius: 2rem;
   background-color: #08A6E4;
   color: white;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
 }
 #popup p {
   font-size: 19px;
+  font-family: "Raleway";
   font-weight: 700;
 }
 #popup input {
@@ -1174,15 +1163,19 @@ footer .redes img {
   overflow: hidden;
   border: 2px solid #ccc;
   border-radius: 10px;
+  padding: 4rem 0;
+  background-color: black;
 }
 #slider #slide {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  background-color: white;
 }
 #slider #slide .window {
   min-width: 100%;
   max-height: 20rem;
   text-align: center;
+  background-color: white;
 }
 #slider #slide .window img {
   width: 100%;
@@ -1208,23 +1201,25 @@ footer .redes img {
 }
 #slider .position {
   position: absolute;
-  bottom: 0;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
 }
 #slider .circle-pos {
-  height: 2rem;
-  width: 2rem;
+  height: 1.5rem;
+  width: 1.5rem;
   border-radius: 50%;
   border: none;
   display: inline-block;
   margin-left: 1rem;
-  border: 4px solid #08A6E4;
+  border: 3px solid white;
+  display: inline-block;
+  margin-left: 1rem;
 }
 
 @media only screen and (min-width: 768px) {
   #slider {
-    width: 80%;
+    width: 100%;
   }
   #slider #slide .window {
     max-height: 30rem;
@@ -1232,6 +1227,11 @@ footer .redes img {
   #slider #slide .window img {
     width: 100%;
     height: 30rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #slider {
+    width: 100%;
   }
 }
 

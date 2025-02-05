@@ -9,7 +9,7 @@ let principal = 0;
 function circlePosition() {
   position.forEach((circle, index) => {
     if (index === principal) {
-      circle.style.backgroundColor = '#08A6E4';
+      circle.style.backgroundColor = '#ffff';
     } else {
       circle.style.backgroundColor = 'transparent';
     }
@@ -49,7 +49,7 @@ position.forEach((circle, index) => {
 
 
 
-function AutoSlide() {
+function autoSlide() {
   setInterval(() => {
     principal += 1;
     if (principal >= slides.length) {
@@ -60,5 +60,5 @@ function AutoSlide() {
   }, 5000);
 }
 
-startAutoSlide();
+autoSlide();
 

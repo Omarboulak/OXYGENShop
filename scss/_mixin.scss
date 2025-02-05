@@ -23,6 +23,11 @@ main{
     bottom: 10rem;
     border: 0;
     z-index: 99;
+    display: none;
+}
+
+button{
+    cursor: pointer;
 }
 
 @mixin circulo($fondo: variables.$rosa){

@@ -5,7 +5,7 @@ header {
     top: 0;
     width: 100%;
     box-shadow: 0px 3px 6px 0px #0000004A;
-    font-family: variables.$opensans;
+    font-family: 'OpenSans';
     z-index: 9;
     background-color: #ffff;
 
@@ -13,10 +13,10 @@ header {
         position: relative;
     }
 
-    .scroll {
+    #scroll {
         width: 100%;
         height: 0.5rem;
-        display: block;
+        display: none;
         z-index: 5;
         background-color: transparent;
 
@@ -106,15 +106,25 @@ header {
             ul {
                 list-style: none;
                 display: flex;
-                gap: 30px;
+                gap: 55px;
+                align-items: center;
                 
                 li {
-
+                    display: block;
                     a {
-                        height: 70px;
+                        display: inline-block;
+                        height: 91px;
                         text-decoration: none;
                         font-size: 11px;
+                        font-weight: 700;
+                        line-height: 91px;
                         color: #A5A5A5;
+                        padding: 0 1rem;
+                    }
+
+                    a:hover{
+                        border-bottom: 4px solid variables.$color-principal;
+                        color: black;
                     }
                 }
             }
@@ -153,16 +163,17 @@ header {
                     display: block;
                     a {
                         display: inline-block;
-                        height: 70px;
+                        height: 91px;
                         text-decoration: none;
                         font-size: 11px;
                         font-weight: 700;
-                        line-height: 70px;
+                        line-height: 91px;
                         color: #A5A5A5;
+                        padding: 0 1rem;
                     }
 
                     a:hover{
-                        border-bottom: 3px solid variables.$color-principal;
+                        border-bottom: 4px solid variables.$color-principal;
                         color: black;
                     }
                 }
