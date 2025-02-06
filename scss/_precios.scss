@@ -89,6 +89,9 @@
     .precios {
         .precios__caja{
             display: flex;
+            gap: 88px;
+            padding: 0 10rem;
+
             .cantidad,
             .propiedades {
                 display: block;
@@ -105,7 +108,7 @@
             .basic, .profesional, .premium{
                 text-align: center;
                 padding-bottom: 3rem;
-                margin: 2rem;
+                // margin: 2rem;
             }
 
             .profesional{
@@ -147,7 +150,6 @@
             .basic, .profesional, .premium{
                 text-align: center;
                 padding-bottom: 3rem;
-                margin: 2rem;
                 transition: transform .3s linear;
 
                 .cantidad,

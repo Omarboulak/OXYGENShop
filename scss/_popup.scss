@@ -3,9 +3,7 @@
 #popup{
     border: 1px solid variables.$color-principal;
     margin: 0 auto;
-    width: 35%;
     text-align: center;
-    padding: 3rem;
     border-radius: 2rem;
     position: fixed;
     top: 3rem;
@@ -13,11 +11,16 @@
     0 6px 20px rgba(8, 166, 228, 0.3);
     font-family: 'Open Sans';
 
+    .modal-content{
+        padding: 3rem 2rem;
+        width: 24rem;
+    }
+
     #close{
         position: absolute;
         top: 1rem;
         right: 2rem;
-        border: 0;
+        border: 0 solid #ffff;
         background-color: #ffff;
     }
 

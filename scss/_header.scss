@@ -59,7 +59,7 @@ header {
 }
 
 .nav_visible{
-    display: block;
+    display: block; 
     
     ul{
         position: relative;
@@ -106,7 +106,7 @@ header {
             ul {
                 list-style: none;
                 display: flex;
-                gap: 55px;
+                gap: 35px;
                 align-items: center;
                 
                 li {
